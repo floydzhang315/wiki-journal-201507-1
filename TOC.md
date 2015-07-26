@@ -19,3 +19,5 @@
   - [https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling](https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling)
 - [产品与设计](product-design.md)
 - [职业规划与加薪](career-bonus.md)
+
+# [原文](yuanwen.md)
