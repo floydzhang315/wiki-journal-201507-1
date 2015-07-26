@@ -1,5 +1,5 @@
 - [移动应用开发](application-development.md)
-  - [使用ionic将数据保存到本地存储中 -- 周倍同](https://www.packtpub.com/books/content/persisting-data-local-storage-ionic)
+  - [使用 ionic 将数据保存到本地存储中 -- 周倍同](https://www.packtpub.com/books/content/persisting-data-local-storage-ionic)
   - [http://thomasfinch.me/blog/2015/07/24/Hooking-C-Functions-At-Runtime.html](http://thomasfinch.me/blog/2015/07/24/Hooking-C-Functions-At-Runtime.html)
   - [https://www.packtpub.com/books/content/developing-twitterkit-digits-ios](https://www.packtpub.com/books/content/developing-twitterkit-digits-ios)
   - [http://www.codingvelocity.com/2015/07/23/go-mobile-intro.html](http://www.codingvelocity.com/2015/07/23/go-mobile-intro.html)
