@@ -5,18 +5,18 @@
   - [See Android Go! Go, Android. Go! -- 袁泽林](go-mobile-intro.md)
 - Web 开发
   - [DevTools Digest: Film strip and a new home for throttling -- 张月](web-developer.md)
-  - [https://www.airpair.com/angularjs/posts/angular-vs-react-the-tie-breaker](https://www.airpair.com/angularjs/posts/angular-vs-react-the-tie-breaker)
+  - [Angular vs. React - the tie breaker -- 康杨](tie-breaker.md)
 - 大数据及商务智能
-  - [http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews](http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews)
-  - [https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job](https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job)
+  - [Understanding the Impact of Cassandra Compact Storage -- 朱瀚杰 ](cassandra-compact-storage.md)
+  - [WRITING TO CASSANDRA FROM HDFS USING A HADOOP MAP REDUCE JOB -- 王运里](hadoop-map.md)
 - 游戏开发
-  - [https://www.packtpub.com/books/content/making-it-games-development](https://www.packtpub.com/books/content/making-it-games-development)
+  - [MAKING IT IN GAMES DEVELOPMENT](games-development.md)
 - 智能硬件
 - 虚拟化和云计算
 - 网络和服务器
 - 安全
 - 全球技术头条
-  - [https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling](https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling)
+  - [DevTools Digest: Film strip and a new home for throttling](throttling.md)
 - 产品与设计
 - 职业规划与加薪
 
