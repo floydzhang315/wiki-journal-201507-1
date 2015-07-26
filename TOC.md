@@ -1,23 +1,23 @@
-- [移动应用开发](application-development.md)
+- 移动应用开发
   - [使用 ionic 将数据保存到本地存储中 -- 周倍同](persisting-data-local-storage.md)
   - [Hooking C Functions at Runtime -- 邵凯阳](hooking-c-functions-at-runtime.md)
   - [DEVELOPING WITH TWITTERKIT & DIGITS ON IOS -- 周倍同](developing-twitterkit-digits-ios.md)
   - [See Android Go! Go, Android. Go! -- 袁泽林](go-mobile-intro.md)
-- [Web 开发](web-development.md)
+- Web 开发
   - [https://www.packtpub.com/books/content/today-you-are-not-web-developer-if-you-don%E2%80%99t-know-javascript-and-its-ecosystem](https://www.packtpub.com/books/content/today-you-are-not-web-developer-if-you-don%E2%80%99t-know-javascript-and-its-ecosystem)
   - [https://www.airpair.com/angularjs/posts/angular-vs-react-the-tie-breaker](https://www.airpair.com/angularjs/posts/angular-vs-react-the-tie-breaker)
-- [大数据及商务智能](bigdata-bi.md)
+- 大数据及商务智能
   - [http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews](http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews)
   - [https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job](https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job)
-- [游戏开发](game-development.md)
+- 游戏开发
   - [https://www.packtpub.com/books/content/making-it-games-development](https://www.packtpub.com/books/content/making-it-games-development)
-- [智能硬件](hardware-creative.md)
-- [虚拟化和云计算](virtualization-cloud.md)
-- [网络和服务器](networking-servers.md)
-- [安全](security.md)
-- [全球技术头条](global-topline.md)
+- 智能硬件
+- 虚拟化和云计算
+- 网络和服务器
+- 安全
+- 全球技术头条
   - [https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling](https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling)
-- [产品与设计](product-design.md)
-- [职业规划与加薪](career-bonus.md)
+- 产品与设计
+- 职业规划与加薪
 
 # [原文](yuanwen.md)
