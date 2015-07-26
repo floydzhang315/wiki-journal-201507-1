@@ -24,7 +24,7 @@
 
 ## [协作规范](https://github.com/jikexueyuanwiki/guide)
 
-## [对应英文目录对应：原文](yuanwen.md)
+## [对应英文目录：原文](yuanwen.md)
 
 
 
