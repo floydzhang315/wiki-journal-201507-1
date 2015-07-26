@@ -1,6 +1,6 @@
 - [移动应用开发](application-development.md)
   - [使用 ionic 将数据保存到本地存储中 -- 周倍同](persisting-data-local-storage.md)
-  - [http://thomasfinch.me/blog/2015/07/24/Hooking-C-Functions-At-Runtime.html](http://thomasfinch.me/blog/2015/07/24/Hooking-C-Functions-At-Runtime.html)
+  - [Hooking C Functions at Runtime -- 邵凯阳](hooking-c-functions-at-runtime.md)
   - [https://www.packtpub.com/books/content/developing-twitterkit-digits-ios](https://www.packtpub.com/books/content/developing-twitterkit-digits-ios)
   - [http://www.codingvelocity.com/2015/07/23/go-mobile-intro.html](http://www.codingvelocity.com/2015/07/23/go-mobile-intro.html)
 - [Web 开发](web-development.md)
