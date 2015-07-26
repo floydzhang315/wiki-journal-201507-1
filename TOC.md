@@ -4,7 +4,7 @@
   - [DEVELOPING WITH TWITTERKIT & DIGITS ON IOS -- 周倍同](developing-twitterkit-digits-ios.md)
   - [See Android Go! Go, Android. Go! -- 袁泽林](go-mobile-intro.md)
 - Web 开发
-  - [https://www.packtpub.com/books/content/today-you-are-not-web-developer-if-you-don%E2%80%99t-know-javascript-and-its-ecosystem](web-developer.md)
+  - [DevTools Digest: Film strip and a new home for throttling -- 张月](web-developer.md)
   - [https://www.airpair.com/angularjs/posts/angular-vs-react-the-tie-breaker](https://www.airpair.com/angularjs/posts/angular-vs-react-the-tie-breaker)
 - 大数据及商务智能
   - [http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews](http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews)
