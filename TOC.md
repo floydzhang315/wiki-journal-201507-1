@@ -10,13 +10,13 @@
   - [Understanding the Impact of Cassandra Compact Storage -- 朱瀚杰 ](cassandra-compact-storage.md)
   - [WRITING TO CASSANDRA FROM HDFS USING A HADOOP MAP REDUCE JOB -- 王运里](hadoop-map.md)
 - 游戏开发
-  - [MAKING IT IN GAMES DEVELOPMENT](games-development.md)
+  - [MAKING IT IN GAMES DEVELOPMENT -- 张鸿飞](games-development.md)
 - 智能硬件
 - 虚拟化和云计算
 - 网络和服务器
 - 安全
 - 全球技术头条
-  - [DevTools Digest: Film strip and a new home for throttling](throttling.md)
+  - [DevTools Digest: Film strip and a new home for throttling -- 张鸿飞](throttling.md)
 - 产品与设计
 - 职业规划与加薪
 
