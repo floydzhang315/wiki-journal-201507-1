@@ -20,6 +20,8 @@
 - 产品与设计
 - 职业规划与加薪
 
+## [说明](description.md)
+
 ## [协作规范](https://github.com/jikexueyuanwiki/guide)
 
 ## [对应英文目录对应：原文](yuanwen.md)
