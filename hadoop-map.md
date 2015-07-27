@@ -2,7 +2,7 @@
 
 > 这篇文章是 MANU MUKERJI 于2015年7月17日所写。文章介绍了 Cassandra 的相关操作。原文地址：[https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job](https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job)
 
-在这篇文章中我会讲解如何设置允许您写入 Cassandra 的 Map Reduce Job。这里介绍的用例将包括串流分析到 Cassandra 中。
+在这篇文章中我会讲解如何设置允许您写入 Cassandra 的 Map Reduce Job。这里介绍的用例将包括串流分析到 Cassandra 中。 
 
 我想在我们开始之前，你有可用的 Cassandra 集群和 Hadoop 集群，甚至单个实例或本地主机就足够了。用于此示例的代码可在 [https://github.com/manum/mr-cassandra](https://github.com/manum/mr-cassandra) 中获得。
 
