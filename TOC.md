@@ -6,6 +6,7 @@
 - Web 开发
   - [DevTools Digest: Film strip and a new home for throttling -- 张月](web-developer.md)
   - [Angular vs. React - the tie breaker -- 康杨](tie-breaker.md)
+  - [http://reactkungfu.com/2015/07/the-hitchhikers-guide-to-modern-javascript-tooling/](http://reactkungfu.com/2015/07/the-hitchhikers-guide-to-modern-javascript-tooling/)
 - 大数据及商务智能
   - [Understanding the Impact of Cassandra Compact Storage -- 朱瀚杰 ](cassandra-compact-storage.md)
   - [WRITING TO CASSANDRA FROM HDFS USING A HADOOP MAP REDUCE JOB -- 王运里](hadoop-map.md)
@@ -19,6 +20,7 @@
   - [DevTools Digest: Film strip and a new home for throttling -- 张鸿飞](throttling.md)
 - 产品与设计
 - 职业规划与加薪
+  - [https://www.linkedin.com/pulse/how-become-great-software-developer-jason-roell](https://www.linkedin.com/pulse/how-become-great-software-developer-jason-roell)
 
 ## [说明](description.md)
 
