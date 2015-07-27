@@ -19,6 +19,7 @@
   - [DevTools Digest: Film strip and a new home for throttling-- 王韬懿](throttling.md)
 - 产品与设计
 - 职业规划与加薪
+  - [How to Become a Super Software Developer](super-software-developer.md)
 
 ## [说明](description.md)
 
