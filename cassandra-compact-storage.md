@@ -1,10 +1,10 @@
 # 理解 Cassandra 压缩储存的作用  
   
-文章来源：http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews  
+文章来源：[http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews](http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews)  
 时间：2015年7月23日  
 作者：mheffner  
   
-！（images/cassandra-compact-storage01）  
+![01](images/cassandra-compact-storage01.jpg)  
   
 ## 本文概要  
   
@@ -12,7 +12,7 @@
   
 ## 介绍  
 
-在 Librato，我们对时间序列的储存主要是应用我们一直在研发的自定义架构所建立的 Apache Cassandra。关于它我们之前已经写到并呈现过几次。在 Cassandra 上我们既存储真实的时间序列也存储历史汇总时间序列。Cassandra 存储节点在我们的基础设施中占有最大的足迹因而这些节点驱动着我们的成本开支，所以我们一直在寻找方式来改进我们数据的效率。  
+在 Librato，我们对时间序列的储存主要是应用我们一直在研发的自定义架构所建立的 Apache Cassandra。关于它我们之前已经[写到](http://blog.librato.com/posts/time-series-data)并[呈现](https://speakerdeck.com/mheffner/time-series-metrics-with-cassandra)过几次。在 Cassandra 上我们既存储真实的时间序列也存储历史汇总时间序列。Cassandra 存储节点在我们的基础设施中占有最大的足迹，因而这些节点驱动着我们的成本开支，所以我们一直在寻找方式来改进我们数据的效率。  
   
 作为我们正在进行的效率改进和后台功能研发的部分，我们最近花时间重新评估了我们的存储架构。自 Cassandra 0.8.x 版本的早些时候以来，我们的架构一直被建立在 Thrift APIs 的内容之上，并且无论何时当我们竖起一个新环路，我们使用‘节点工具’命令来移动它。我们一直都在紧密的跟随 CQL 的发展并且已经将我们的读取路径的部分在 2.0.x 版本中移动到了新的本地接口。甚至，我们想要更进一步关注使用本地 CQL 接口完全构造我们的架构转移（创建 CQL 表，或者他们所称的“列族”）。  
   
@@ -20,15 +20,15 @@
   
 先前当我们关注 CQL 表结构时困住我们的事情之一是涉及到一个 COMPACT STORAGE 选项--我将停止吐槽并且从这之后把它称作为压缩存储。其定义文档如下：  
   
-“…主要将对 CQL3 之前创建的定义的反向兼容性为目标…在硬盘上提供一个更压缩紧凑一些的数据分布，但这样是以减小灵活性和拓展性为代价的…由于以上原因是不推荐向后兼容性之外使用的。”  
+ “…主要将对 CQL3 之前创建的定义的反向兼容性为目标...在硬盘上提供一个更压缩紧凑一些的数据分布，但这样是以减小灵活性和拓展性为代价的…由于以上原因是不推荐向后兼容性之外使用的。”  
   
 在 CQL 之前当 Thrift 接口是唯一的 API 时，所有的表都是以压缩存储的方式建立的。和文档状态一样，它是一个除了向后兼容性外别无它用的遗留选项。  
   
-在我们的调研大约进行到这个时候我们偶然发现了某团队研究解析的一篇博客文章。主要是关于他们对 CQL 表的经验认识。这是一篇很棒的文章，我十分推荐它。文章有一段的标题是“我们没有使用 COMPACT STORAGE…你敢相信下面发生了什么吗”。它记录了使用压缩存储的他们自己的调研。在这篇文章中，他们提及了当没有对表使用压缩存储时他们看到一个大 30 倍的存储空间容量。如果知道我们所处理的数据库的容量大小，这种类型的增大是不可忽视的。  
+在我们的调研大约进行到这个时候我们偶然发现了某团队研究解析的一篇[博客文章](http://blog.parsely.com/post/1928/cass/)。主要是关于他们对 CQL 表的经验认识。这是一篇很棒的文章，我十分推荐它。文章有一段的标题是 “我们没有使用 COMPACT STORAGE…你敢相信下面发生了什么吗”。它记录了使用压缩存储的他们自己的调研。在这篇文章中，他们提及了当没有对表使用压缩存储时他们看到一个大 30 倍的存储空间容量。如果知道我们所处理的数据库的容量大小，这种类型的增大是不可忽视的。  
   
 ## CQL 数据分布  
   
-那么让我们研究一下一个 CQL 表的数据分布是什么样的。我们将以一个简化过的例子开始，它来自用 Cassandra 建立一项音乐服务的教程指南。我们已经用一个<id，song_id>的指针把表减少到只有一个 id，音乐 id 和歌曲名称。  
+那么让我们研究一下一个 CQL 表的数据分布是什么样的。我们将以一个简化过的例子开始，它来自用 Cassandra 建立一项音乐服务的教程指南。我们已经用一个（id，song_id）的指针把表减少到只有一个 id，音乐 id 和歌曲名称。  
   
 ```
 CREATE TABLE playlists_1 (   id uuid,   song_id uuid, title text,
@@ -139,7 +139,7 @@ INSERT INTO playlists_2 (id, song_id, title)
   
 为了比较这两种方式我们建立了两个表：一个使用默认存储格式而另一个使用了压缩存储。我们的架构和上面的播放列表相似：一个行关键字，在列关键字中有 2-3 个列，和单独一个值列。在几天时间内我们推入分段工作负载通过它--每次对两个表写入相同的行。下面是两个 sstables 中每一个的存储载入图表：  
   
-！（images/cassandra-compact-storage02）  
+![02](images/cassandra-compact-storage02.png)
   
 结果告诉我们，对我们的测试用例，无压缩存储将多需要大约 35% 的存储空间（并且任何额外的处理都需要如此）。这样就清楚地知道了在我们写入的数据卷当中，非压缩存储中 35% 的存储是没有被有效利用正常工作的。那么那里为什么会有一个选项？  
   
@@ -151,7 +151,7 @@ INSERT INTO playlists_2 (id, song_id, title)
   
 ### 额外增加的行列  
   
-如下所示，你不可以越过主关键字创建一个以上的列。因为我们看到压缩存储在存储模式中生成了一个列，你被单一行关键字，单一列关键字（作为多列组成部分）和单一列数据值的限制所拦住了。  
+如下所示，您不可以越过主关键字创建一个以上的列。因为我们看到压缩存储在存储模式中生成了一个列，您被单一行关键字，单一列关键字（作为多列组成部分）和单一列数据值的限制所拦住了。  
   
 ```
 cqlsh:Metrics> CREATE TABLE playlists_3 (   id uuid,   song_id uuid,
@@ -162,7 +162,7 @@ Bad Request: COMPACT STORAGE with composite PRIMARY KEY allows no more than one 
 ```
   
   
-如果在你的数据模式中需要更多的列值，你有两个选择：不使用压缩存储，或者将他们序列化成单一列数据值，比如 Json，ProtoBuf，Avro等。在那样的数据模式下更新列将不得不从一侧采取操作并必须在你的操作中不可分。考虑到你将不能利用 Cassandra 的轻量级交易进行更新这一点是非常重要的。对我们自己的测试用例来说，我们使用了 Json 和 ProtoBuf 数据团，因为我们的数据模式是只添加的。  
+如果在你的数据模式中需要更多的列值，你有两个选择：不使用压缩存储，或者将他们序列化成单一列数据值，比如 Json，ProtoBuf，Avro 等。在那样的数据模式下更新列将不得不从一侧采取操作并必须在你的操作中不可分。考虑到你将不能利用 Cassandra 的轻量级交易进行更新这一点是非常重要的。对我们自己的测试用例来说，我们使用了 Json 和 ProtoBuf 数据团，因为我们的数据模式是只添加的。  
   
 ### 架构灵活性  
   
@@ -187,6 +187,6 @@ Bad Request: Cannot add new column to a COMPACT STORAGE table
   
 如果存储效率并不是你的首要考虑因素，那么架构灵活性和非压缩表提供的交易处理的升级可以让应用发展更容易，考虑下你如何构架可以随时改变和你是否以后想要添加移除列或者建立额外索引的灵活性。  
   
-感谢 Opsmatic 的 Mikhail Panchenko 审阅文章早期版本。  
+感谢[ Opsmatic](https://opsmatic.com/) 的 Mikhail Panchenko 审阅文章早期版本。  
   
-如果你喜欢这篇文章想要加入 Cassandra，来和我们工作！
+如果你喜欢这篇文章想要加入 Cassandra，[ 来和我们工作](http://librato.jobs/)！
