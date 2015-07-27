@@ -2,9 +2,9 @@
 
 > 这篇文章是 MANU MUKERJI 于2015年7月17日所写。文章介绍了 Cassandra 的相关操作。原文地址：[https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job](https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job)
 
-在这篇文章中我会讲解如何设置允许您写入 Cassandra 的 Map Reduce Job。这里介绍的用例将包括串流分析到 Cassandra 中。
+在这篇文章中我会讲解如何设置允许您写入 Cassandra 的 Map Reduce Job。这里介绍的用例将把串流分析包括到 Cassandra 中。
 
-我想在我们开始之前，你有可用的 Cassandra 集群和 Hadoop 集群，甚至单个实例或本地主机就足够了。用于此示例的代码可在 [https://github.com/manum/mr-cassandra](https://github.com/manum/mr-cassandra) 中获得。
+我想在我们开始之前，您有可用的 Cassandra 集群和 Hadoop 集群，甚至单个实例或本地主机就足够了。用于此示例的代码可在 [https://github.com/manum/mr-cassandra](https://github.com/manum/mr-cassandra) 中获得。
 
 让我们创建我们将要使用的 Cassandra Keyspace 和 Table。您可以在 cqlsh 中运行以下代码(命令行实用程序，可以让你跟 Cassandra 交互)。
 
@@ -31,11 +31,11 @@ cqlsh:keytest> select * from keytable;
 (1 rows)
 ```
 
-我们可以从看 CassandraHelper.java 和 CassandraTester.java 开始。
+我们可以从浏览 CassandraHelper.java 和 CassandraTester.java 源码开始。
 
 **CassandraHelper** 方法：
 
-getSession():检索当前会话对象以确保没有其他会话对象被创建。
+getSession()：检索当前会话对象以确保没有其他会话对象被创建。
 
 
 ```
@@ -52,7 +52,7 @@ public Session getSession()  {
     }
 ```
 
-createConnection(String): 为 Cassandra 服务器传递 host。
+createConnection(String)：为 Cassandra 服务器传递 host。
 
 
 ```
@@ -75,7 +75,7 @@ public void createConnection(String node)  {
     }
 ```
 
-closeConnection(): 在一切都完成之后关闭连接。
+closeConnection()：在一切都完成之后关闭连接。
 
 
 ```
@@ -84,7 +84,7 @@ public void closeConnection() {
     }
 ```
 
-prepareQueries():此方法准备的查询在服务器端进行了优化。如果您经常执行相同的查询或查询不会更改但数据可能改变，例如在插入操作时，它推荐您使用预查询。
+prepareQueries()：此方法准备的查询在服务器端进行了优化。如果您经常执行相同的查询或查询不更改但仅仅改变数据，例如在插入操作时，它推荐您使用预查询。
 
 ```
 private void prepareQueries()  {
@@ -93,7 +93,7 @@ private void prepareQueries()  {
     }
 ```
 
-addKey(String):该方法将数据添加到群集，它还有try catch块捕获异常并告诉你正在发生什么。
+addKey(String)：该方法将数据添加到集群，它还有 try catch 捕获异常区域并且告诉您正在发生什么。
 
 ```
 public void addKey(String key) {
@@ -122,11 +122,11 @@ public void addKey(String key) {
     }
 ```
 
-CassandraTester: 该类有一个 void main 方法，您需要提供想要连接的主机并且它会将值 "test1234" 写入到 Cassandra 中。
+CassandraTester：该类有一个 void main 方法，您需要提供想要连接的主机并且它会将值 "test1234" 写入到 Cassandra 中。
 
-MapReduceExample.java 是这里的感兴趣的文件。它有一个 Mapper 类和 Reducer 类和 main 方法来初始化工作。在 Mapper 下，你会发现 setup() 和 cleanup() 方法——它们会被 Map Reduce 框架自动调用来处理设置和清理操作——您将使用连接到 Cassandra 和之后的清理连接。
+MapReduceExample.java 是这里比较有趣的一个文件。它使用 Mapper 类和 Reducer 类以及 main 方法来初始化工作。在 Mapper 下，你会发现 setup() 和 cleanup() 方法——它们会被 Map Reduce 框架自动调用来进行处理设置和清理操作——您将使用它来完成连接到 Cassandra 并且在连接之后对连接的清理的工作。
 
-我修改了标准的单词计数的例子，现在的方案对行计数，并且会将它们都写入 Cassandra。reducer 的输出基本上是各行和行数。
+我修改了标准的单词计数的例子，现在的方案对行计数，并且会将它们都写入 Cassandra。reducer 的输出基本上是行数和总数。
 
 若要运行本示例，您需要做以下几点：
 
@@ -140,7 +140,7 @@ MapReduceExample.java 是这里的感兴趣的文件。它有一个 Mapper 类�
 
 5. 使用以下命令运行 jar：hadoop jar mr_cassandra-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.example.com.mr_cassandra.MapReduceExample /user/ubuntu/all-shakespeare.txt /user/ubuntu/output/
 
-如果您运行上述步骤，它应该启动这份工作。在工作完成之后，转到 cqlsh 并运行 select * from keytable limit 10;
+如果您运行上述步骤，它应该可以启动这份工作了。在工作完成之后，转到 cqlsh 并运行 select * from keytable limit 10;
 
 ```
 cqlsh:keytest> select * from keytable limit 10;
@@ -165,7 +165,7 @@ cqlsh:keytest>
 
 ## 关于作者
 
-Manu Mukerji 有云计算和大数据方面的背景，实时处理数以亿计的每天的交易。他喜欢建筑和设计可扩展、高可用性数据的解决方案，并在网络广告和社交媒体方面有丰富的工作经验。
+Manu Mukerji 有云计算和大数据方面的知识背景，每天实时处理数以亿计的交易。他喜欢构建和设计可扩展、具有高可用性数据的解决方案。并且他在网络广告和社交媒体方面有丰富的工作经验。
 
 [twitter:@next2manu](twitter:@next2manu)
 
