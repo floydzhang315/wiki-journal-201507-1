@@ -1,20 +1,22 @@
-#不懂 JavaScript？那你就不是一个 Web 开发者--张月
+# 不懂 JavaScript？那你就不是一个 Web 开发者--张月
+
+![01](images/skill-up-blog_2.png)  
 
 来源：[https://www.packtpub.com/books/content/today-you-are-not-web-developer-if-you-don%E2%80%99t-know-javascript-and-its-ecosystem](https://www.packtpub.com/books/content/today-you-are-not-web-developer-if-you-don%E2%80%99t-know-javascript-and-its-ecosystem)  
 时间：2015年7月01日  
 作者：MARIO CASCIARO  
 
-##关于本文
+## 关于本文
 
 什么是当下最流行的 Web 开发技术？作为一个 Web 开发者需要具备哪些技能？Web 开发未来发展如何？本文作者 MARIO CASCIARO 将一一为你阐释。
 
-##你的综合技能里可能还没有胜任 Web 开发的最佳技术
+## 你的综合技能里可能还没有胜任 Web 开发的最佳技术
 
 我曾参与一个小的辅助项目，当时我尽可能地把新的技能付诸实践，并尝试一些工作职责以外的事。那是一个类似于一个社交网络的 Web 应用程序，我选择了基于 Java 的 Spring 框架作为主要技术堆栈和前段的骨架。大约4年前，作为一个 Java 高级开发人员，我认为 Java 是最有潜力的技术。它近乎完美地实现了企业 Web 应用以及核心任务的分布式应用甚至移动应用。直到2015年，Java 仍然是最受欢迎而且有价值的技术，但是，在做这个项目的过程中，我改变了自己的观点——除非特别需要我不会使用它。
 
 我记得在某个时刻，我意识到我花了很多开发时间来设计应用程序的面向对象的结构和编写样板代码。为了寻找一个解决方案，我将项目迁移到 Groovy 和 Grails 上，并试图将一个小的自己编写的双向绑定框架应用于前端。虽然情况有一点改善，但我依然觉得需要一种在前后端都更加敏捷的技术，这种技术更加适合 Web 开发。
 
-##Web 变化地很快，所以你的技能也需要不断进化
+## Web 变化地很快，所以你的技能也需要不断进化
 
 我尝试用一种从根本上在服务端不同于 PHP、Ruby on Rails、Python，或在客户端不同于 JQuery 或骨架的技术。幸运的是，我发现了 [Node.js](https://nodejs.org/) 和 [Angular.js](https://angularjs.org/)，通过使用 Node，我发现我的心态从“如何做事”转变为“把事情搞定”。另一方面，Angular 彻底改变了我的前端开发的方法，它大大减少了我之前使用的样板代码。但最重要的是，我意识到 JavaScript 和它的生态系统正在成为一个重要的事情。
 
