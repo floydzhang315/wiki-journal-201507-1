@@ -16,7 +16,7 @@
 - 网络和服务器
 - 安全
 - 全球技术头条
-  - [DevTools Digest: Film strip and a new home for throttling -- 张鸿飞](throttling.md)
+  - [DevTools Digest: Film strip and a new home for throttling -- 周倍同](throttling.md)
 - 产品与设计
 - 职业规划与加薪
 
