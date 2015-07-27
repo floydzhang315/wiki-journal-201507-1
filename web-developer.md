@@ -42,12 +42,3 @@ PHP，Ruby 以及 Python 仍然是非常流行的开发 Web 应用服务端的�
 
 最后，随着浏览器逐渐成为未来的运行环境，最近发布的 [WebAssembly](https://github.com/WebAssembly) 承诺给 Web 创造自身的“字节码”，这可以使你在 JavaScript 中加载其它语言写的代码，当 WebAssembly 广泛使用时，在浏览器中看到复杂的 3D 视频游戏或运行功能齐全的视频编辑器将变得非常普遍。JavaScript 将仍然是主流 Web 语言，但它将辅之以 WebAssembly 提出的新的可能性。
 
-
-
-
-
-
-
-
-
-
