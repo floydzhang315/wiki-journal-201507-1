@@ -1,10 +1,10 @@
-# 在游戏开发中获得成功
+# 在游戏开发中获得成功 
 来源：https://www.packtpub.com/books/content/making-it-games-development  
 时间：2015年7月16日
 作者：VENITA PEREIRA  
-#关于本文
+## 关于本文
 现如游戏行业发展迅速，Unity引擎凭借其自身的显著优势，已经逐渐取代虚幻引擎，受到越来越广泛的应用。本文主要介绍了Unity引擎的主要优势以及学习它的巨大价值，为游戏开发人员指引职业发展道路，迅速在游戏开发中取得成功。
-#文章内容
+## 文章内容
 Venita Pereira是Full Fat的高级游戏设计师，在游戏行业拥有超过8年的经验，并且是[《通过开发用例学习统一2D游戏》](https://www.packtpub.com/game-development/unity-2d-game-development-example-beginner’s-guide-raw)的作者。她曾为若干AAA级开发商以及许多类型和平台工作过。最近，她工作于特工跑酷的Unity更新，并且也是非常成功的索尼克冲刺上的SEGA唯一设计师，同样使用Unity引擎。她以[@Atinev](https://twitter.com/Atinev)发送推文，你还可以在[LinkedIn](https://www.linkedin.com/pub/venita-pereira/3/551/899)和[Facebook](https://www.facebook.com/venita.pereira.7)上找到她。
 ## 最大的问题 - 虚拟引擎与Unity
 作为在专业游戏行业最广泛使用的引擎，学习Unity是未来游戏职业生涯一个具大的投资。虽然有些人可能会争辩说，虚幻引擎是首选（我，一个以前的虚幻引擎的忠实用户），但Unity已经得到了跨越式发展并且许多人现在认为这是遥遥领先的。
