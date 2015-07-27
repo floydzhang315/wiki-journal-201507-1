@@ -2,7 +2,7 @@
   - [使用 ionic 将数据保存到本地存储中 -- 周倍同](persisting-data-local-storage.md)
   - [Hooking C Functions at Runtime -- 邵凯阳](hooking-c-functions-at-runtime.md)
   - [DEVELOPING WITH TWITTERKIT & DIGITS ON IOS -- 周倍同](developing-twitterkit-digits-ios.md)
-  - [See Android Go! Go, Android. Go! -- 周背同-（王迪）](go-mobile-intro.md)
+  - [See Android Go! Go, Android. Go! -- 周倍同-（王迪）](go-mobile-intro.md)
 - Web 开发
   - [DevTools Digest: Film strip and a new home for throttling -- 张月](web-developer.md)
   - [Angular vs. React - the tie breaker -- 康杨](tie-breaker.md)
