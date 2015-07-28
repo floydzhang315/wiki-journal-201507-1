@@ -7,20 +7,27 @@
   - [不懂 JavaScript？那你就不是一个 Web 开发者--张月（已校对）](web-developer.md)
   - [Angular vs. React - the tie breaker -- 康杨 截止7.28 23.55](tie-breaker.md)
   - [The Hitchhiker's Guide to Modern JavaScript Tooling-- 张鸿飞（已校对）](javaScript-tooling.md)
+  - [Useful Angular.js Tools -- 未分配]()
+- 后端开发
+  - [Why Node.js? When To Use Node.js? -- 未分配]()
 - 大数据及商务智能
   - [Understanding the Impact of Cassandra Compact Storage -- 朱瀚杰（已校对） ](cassandra-compact-storage.md)
   - [WRITING TO CASSANDRA FROM HDFS USING A HADOOP MAP REDUCE JOB -- 王运里（已校对）](hadoop-map.md)
 - 游戏开发
   - [MAKING IT IN GAMES DEVELOPMENT -- 张鸿飞 截止7.29 23.55](games-development.md)
 - 智能硬件
-- 虚拟化和云计算
-- 网络和服务器
-- 安全
+  - [How to develop a simple Android Wear app -- 未分配]()
+- 云计算与安全
+  - [Playing Around with Docker: Hello World, Development Environment and Your Application -- 未分配]()
+  - [How to use the Android Keystore to store passwords and other sensitive information -- 未分配]()
 - 全球技术头条
   - [DevTools Digest: Film strip and a new home for throttling-- 王韬懿（已校对）](throttling.md)
+  - [4 reasons why Google joined OpenStack -- 未分配]()
 - 产品与设计
+  - [15 Useful UI and UX Tools and Resources for Designers -- 未分配]()
+  - [5 tips for designing a brilliant Apple Watch app -- 未分配]()
 - 职业规划与加薪
-  - [How to Become a Super Software Developer 截止7.29 23.55](super-software-developer.md)
+  - [How to Become a Super Software Developer -- 杨旋 截止7.29 23.55](super-software-developer.md)
 
 ## [说明](description.md)
 
