@@ -27,7 +27,7 @@
   - [15 Useful UI and UX Tools and Resources for Designers -- 邵凯阳](tools-resources.md)
   - [5 tips for designing a brilliant Apple Watch app -- 朱瀚杰](apple-watch.md)
 - 职业规划与加薪
-  - [How to Become a Super Software Developer -- 杨旋 截止7.29 23.55](super-software-developer.md)
+  - [How to Become a Super Software Developer -- 杨旋 待校对](super-software-developer.md)
 
 ## [说明](description.md)
 
