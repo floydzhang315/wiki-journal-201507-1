@@ -1,4 +1,4 @@
-# DevTools 摘要: Film strip and a new home for throttling -- 王韬懿
+# DevTools 摘要: 处理条带化数据时给条带化数据的一个新家 -- 王韬懿
     
 来源：[https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling](https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling)
 
@@ -55,7 +55,7 @@
 
 ### 社区推动力
 
-#### Down and dirty with Chrome DevTools
+#### “肮脏下流”的chrome工具
 
 ![down_and_dirty.png](images/down_and_dirty.png)
 

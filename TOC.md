@@ -1,10 +1,10 @@
 - 移动应用开发
   - [使用 ionic 将数据保存到本地存储中 -- 周倍同（已校对）](persisting-data-local-storage.md)
-  - [Hooking C Functions at Runtime -- 邵凯阳 截止7.28 23.55](hooking-c-functions-at-runtime.md)
+  - [Hooking C Functions at Runtime -- 邵凯阳 截止（待校对）](hooking-c-functions-at-runtime.md)
   - [DEVELOPING WITH TWITTERKIT & DIGITS ON IOS -- 周倍同 截止7.28 23.55](developing-twitterkit-digits-ios.md)
   - [See Android Go! Go, Android. Go! -- 王韬懿（已校对）](go-mobile-intro.md)
 - Web 开发
-  - [DevTools Digest: Film strip and a new home for throttling -- 张月（待校对）](web-developer.md)
+  - [不懂 JavaScript？那你就不是一个 Web 开发者--张月（已校对）](web-developer.md)
   - [Angular vs. React - the tie breaker -- 康杨 截止7.28 23.55](tie-breaker.md)
   - [The Hitchhiker's Guide to Modern JavaScript Tooling-- 张鸿飞（已校对）](javaScript-tooling.md)
   - [http://www.fromdev.com/2015/07/useful-angularjs-tools.html](http://www.fromdev.com/2015/07/useful-angularjs-tools.html)
