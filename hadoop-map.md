@@ -1,6 +1,14 @@
 # 从 HDFS 中使用分布式的 MAP REDUCE JOB 写入 CASSANDRA   --   王运里
 
-> 这篇文章是 MANU MUKERJI 于2015年7月17日所写。文章介绍了 Cassandra 的相关操作。原文地址：[https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job](https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job)
+作者：MANU MUKERJI  
+
+时间：2015年7月17日
+
+## 关于本文
+
+文章开头介绍了 Cassandra 中表的创建等基本知识。随后介绍了java 中对 Cassandra 的操作的库 CassandraHelper.java，CassandraTester.java，MapReduceExample.java，还有其中的 getSession()，createConnection(String)，closeConnection()，prepareQueries()，addKey(String) 等方法。文章最后，作者给出了一个他修改过的标准单词计数的示例，他将计数的数据写入到 Cassandra 中，并在 cqlsh 中查看了运行结果。作者在文章中详细地给出了运行此示例的步骤。此外，作者还在文章中提供了他对该示例测试时所用的数据集，您可以从 git 上获取它。文中原文地址：[https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job](https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job)
+
+## 文章内容
 
 在这篇文章中我会讲解如何设置允许您写入 Cassandra 的 Map Reduce Job。这里介绍的用例将包括串流分析到 Cassandra 中。 
 
