@@ -1,6 +1,6 @@
 - 移动应用开发
   - [使用 ionic 将数据保存到本地存储中 -- 周倍同（已校对）](persisting-data-local-storage.md)
-  - [Hooking C Functions at Runtime -- 邵凯阳 截止（待校对）](hooking-c-functions-at-runtime.md)
+  - [Hooking C Functions at Runtime -- 邵凯阳 （已校对）](hooking-c-functions-at-runtime.md)
   - [DEVELOPING WITH TWITTERKIT & DIGITS ON IOS -- 周倍同 截止7.28 23.55](developing-twitterkit-digits-ios.md)
   - [See Android Go! Go, Android. Go! -- 王韬懿（已校对）](go-mobile-intro.md)
 - Web 开发
@@ -27,7 +27,4 @@
 ## [协作规范](https://github.com/jikexueyuanwiki/guide)
 
 ## [对应英文目录：原文](yuanwen.md)
-
-
-
 
