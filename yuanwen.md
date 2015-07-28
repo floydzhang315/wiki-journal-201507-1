@@ -15,7 +15,7 @@
   - [从 HDFS 中使用分布式的 MAP REDUCE JOB 写入 CASSANDRA](https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job)
 - 游戏开发
   - [在游戏开发中获得成功 ](https://www.packtpub.com/books/content/making-it-games-development)
-- [智能硬件](hardware-creative.md)
+- 智能硬件
   - [How to develop a simple Android Wear app ](http://www.androidauthority.com/develop-simple-android-wear-app-622043/)
 - 云计算与安全
   - [Playing Around with Docker: Hello World, Development Environment and Your Application ](http://www.tugberkugurlu.com/archive/playing-around-with-docker-hello-world-development-environment-and-your-application)
