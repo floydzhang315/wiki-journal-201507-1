@@ -1,5 +1,7 @@
 # 如何成为一个超级软件开发者 -- 杨旋
 
+![01](images/super-software-developer.jpg)
+
 原文地址：[https://www.linkedin.com/pulse/how-become-great-software-developer-jason-roell](https://www.linkedin.com/pulse/how-become-great-software-developer-jason-roell)
 
 时间：2015年7月21日
