@@ -4,7 +4,7 @@
   - [DEVELOPING WITH TWITTERKIT & DIGITS ON IOS -- 周倍同 截止7.28 23.55](developing-twitterkit-digits-ios.md)
   - [See Android Go! Go, Android. Go! -- 王韬懿（已校对）](go-mobile-intro.md)
 - Web 开发
-  - [DevTools Digest: Film strip and a new home for throttling -- 张月（待校对）](web-developer.md)
+  - [不懂 JavaScript？那你就不是一个 Web 开发者--张月（待校对）](web-developer.md)
   - [Angular vs. React - the tie breaker -- 康杨 截止7.28 23.55](tie-breaker.md)
   - [The Hitchhiker's Guide to Modern JavaScript Tooling-- 张鸿飞（已校对）](javaScript-tooling.md)
 - 大数据及商务智能
