@@ -10,6 +10,10 @@
 
 什么是当下最流行的 Web 开发技术？作为一个 Web 开发者需要具备哪些技能？Web 开发未来发展如何？本文作者 MARIO CASCIARO 将一一为你阐释。
 
+## 文章内容
+
+MARIO CASCIARO 是一位软件工程师，同时也是一位对开放源码充满热情的技术领导者，在他近期成功出版 Node.jsDesignPatterns 这本书之后，我们联系到他，讨论了他对当今 Web 开发最重要的技术和其未来的看法。
+
 ## 你的综合技能里可能还没有胜任 Web 开发的最佳技术
 
 我曾参与一个小的辅助项目，当时我尽可能地把新的技能付诸实践，并尝试一些工作职责以外的事。那是一个类似于一个社交网络的 Web 应用程序，我选择了基于 Java 的 Spring 框架作为主要技术堆栈和前段的骨架。大约4年前，作为一个 Java 高级开发人员，我认为 Java 是最有潜力的技术。它近乎完美地实现了企业 Web 应用以及核心任务的分布式应用甚至移动应用。直到2015年，Java 仍然是最受欢迎而且有价值的技术，但是，在做这个项目的过程中，我改变了自己的观点——除非特别需要我不会使用它。
@@ -44,3 +48,8 @@ PHP，Ruby 以及 Python 仍然是非常流行的开发 Web 应用服务端的�
 
 最后，随着浏览器逐渐成为未来的运行环境，最近发布的 [WebAssembly](https://github.com/WebAssembly) 承诺给 Web 创造自身的“字节码”，这可以使你在 JavaScript 中加载其它语言写的代码，当 WebAssembly 广泛使用时，在浏览器中看到复杂的 3D 视频游戏或运行功能齐全的视频编辑器将变得非常普遍。JavaScript 将仍然是主流 Web 语言，但它将辅之以 WebAssembly 提出的新的可能性。
 
+Mario 的书作为我们的 [Skill Up](https://www.packtpub.com/web-development/nodejs-design-patterns) 打包技能的一部分，5本电子书只需25美元。
+
+###什么是 Skill Up？
+
+在6月期间，我们调查了超过 20000 名 IT 专业人士，了解到他们目前正在使用的技术以及计划在未来 12 个月内将要学习的技术，具体详情请参阅我们的 [Web 开发技能工资报告](https://www.packtpub.com/skillup/web-dev-salary-report)。
