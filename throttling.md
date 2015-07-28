@@ -12,21 +12,9 @@
 
 ## 文章内容
 
-- 分类
- - [全部](https://developers.google.com/web/updates/chrome-devtools/)
- - [新闻](https://developers.google.com/web/updates/chrome-devtools/news/)
- - [建议](https://developers.google.com/web/updates/chrome-devtools/tip/)
- - [案例学习](https://developers.google.com/web/updates/chrome-devtools/case-study/)
- - [注意](https://developers.google.com/web/updates/chrome-devtools/spotlight/)
-- 产品
- - [全部](https://developers.google.com/web/updates/news/)
- - [所有工具](https://developers.google.com/web/updates/tools/news/)
- - [Chrom](https://developers.google.com/web/updates/chrome/news/)
- - [Chrom工具](https://developers.google.com/web/updates/chrome-devtools/news/)
-
 ### DevTools 新闻，和它一样新鲜
 
-在这片文章中第一条新闻是一个小的 meta - 它就是这更新！时不时的至少一个月，我会总结Chrom 开发者工具发生了什么。
+在这片文章中第一条新闻是一个小的 meta - 它就是这更新！时不时的至少一个月，我会总结 Chrom 开发者工具发生了什么。
 
 当我说新鲜的时候，我的意思是：我会介绍在 [Chrome Canary](https://www.google.com/chrome/browser/canary.html) 里面的新特征，因此如果你想保持不变，那也非常酷。但是如果你很有冒险精神并且想保持在顶端，这些文章就是为你准备的。除了最新的特征和 bug 修复，你会在每一篇文章的最后找到一个我们热爱的读者的社区推动力部分。
 
@@ -38,13 +26,17 @@
 
 就在一周之前，我们在实验之外获得了一个有重要意义的特征：一个可以捕捉 Network 和 Timeline 的页面截图能力。结构
 
-# =============这是视频=============
+![mp4](images/filmstrip_network.png)
+
+[视频地址](https://developers.google.com/web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/filmstrip_network.mp4)
 
 在 Network 面板中，点击小小的照相机图标就可以开始捕捉结构，然后重新载入这个页面就可以开始触发这个捕捉。除了像用其他工具捕捉的屏幕，比如 [WebPageTest](http://webpagetest.org/) ,我们目前只显示真正从图像中提取出来的结构。
 
 当双击其中的一个结构的时候会显示突起的视图（然后使用左/右箭头来定位），当结构被真正捕捉的时候鼠标经过它们会显示从面板交叉的线条，这允许你修正已经加载的部分。这样一些常见的加载问题更加简单，比如渲染块级网页字体。
 
-# =============这是视频============= 
+![mp4](images/filmstrip_network01.png)
+
+[视频地址](https://developers.google.com/web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/filmstrip_timeline.mp4)
 
 在 Timeline 面板中，你可以通过选中在工具条中的 checkbox 来允许捕捉屏幕。和网络面板有一点不同的地方是：在这个案例中，我们尝试捕捉平时我们可以的 －  to be able to drop said screenshots on a linear timescale that correlates with the other rows in Timeline. 不用双击去预加载，视图中突起的部分在鼠标经过的时候就会出现。
 
@@ -56,7 +48,7 @@
 
 这个主页只是一面镜子而已：它在 Device Mode 也是可用的，因为当在你的网路响应的时候模拟坏连接也是非常重要的。
 
-小花絮 
+#### 小花絮 
 
 讨厌网络时间线上一些怪异的循环吗？我们一样。每一帧的时候我们看到的都是一些点。当你的鼠标在不断移动的时候它们看起来就好像形成了线。（https://src.chromium.org/viewvc/blink?revision=198505&view=revision）当你在不同设备之间切换的时候 Device Mode 起到保持方向的效果（https://src.chromium.org/viewvc/blink?revision=198513&view=revision）
 
