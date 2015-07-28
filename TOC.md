@@ -1,27 +1,27 @@
 - 移动应用开发
   - [使用 ionic 将数据保存到本地存储中 -- 周倍同（已校对）](persisting-data-local-storage.md)
-  - [Hooking C Functions at Runtime -- 邵凯阳 （已校对）](hooking-c-functions-at-runtime.md)
+  - [运行时的挂钩 C 函数 -- 邵凯阳 （已校对）](hooking-c-functions-at-runtime.md)
   - [DEVELOPING WITH TWITTERKIT & DIGITS ON IOS -- 周倍同 截止7.28 23.55](developing-twitterkit-digits-ios.md)
-  - [See Android Go! Go, Android. Go! -- 王韬懿（已校对）](go-mobile-intro.md)
+  - [用 Go 语言来看 Android！ 出发，Android。 -- 王韬懿（已校对）](go-mobile-intro.md)
 - Web 开发
   - [不懂 JavaScript？那你就不是一个 Web 开发者--张月（已校对）](web-developer.md)
   - [Angular vs. React - the tie breaker -- 康杨 截止7.28 23.55](tie-breaker.md)
-  - [The Hitchhiker's Guide to Modern JavaScript Tooling-- 张鸿飞（已校对）](javaScript-tooling.md)
+  - [The Hitchhiker's Guide to Modern JavaScript Tooling-- 截止7.29 23.55](javaScript-tooling.md)
   - [Useful Angular.js Tools -- 未分配]()
 - 后端开发
   - [Why Node.js? When To Use Node.js? -- 未分配]()
 - 大数据及商务智能
-  - [Understanding the Impact of Cassandra Compact Storage -- 朱瀚杰（已校对） ](cassandra-compact-storage.md)
-  - [WRITING TO CASSANDRA FROM HDFS USING A HADOOP MAP REDUCE JOB -- 王运里（已校对）](hadoop-map.md)
+  - [理解 Cassandra 压缩储存的作用 -- 朱瀚杰（已校对） ](cassandra-compact-storage.md)
+  - [从 HDFS 中使用分布式的 MAP REDUCE JOB 写入 CASSANDRA  -- 王运里（已校对）](hadoop-map.md)
 - 游戏开发
-  - [MAKING IT IN GAMES DEVELOPMENT -- 张鸿飞 截止7.29 23.55](games-development.md)
+  - [在游戏开发中获得成功 -- 张鸿飞 （已校对） ](games-development.md)
 - 智能硬件
   - [How to develop a simple Android Wear app -- 未分配]()
 - 云计算与安全
   - [Playing Around with Docker: Hello World, Development Environment and Your Application -- 未分配]()
   - [How to use the Android Keystore to store passwords and other sensitive information -- 未分配]()
 - 全球技术头条
-  - [DevTools Digest: Film strip and a new home for throttling-- 王韬懿（已校对）](throttling.md)
+  - [DevTools 摘要: 处理条带化数据时给条带化数据的一个新家-- 王韬懿（已校对）](throttling.md)
   - [4 reasons why Google joined OpenStack -- 未分配]()
 - 产品与设计
   - [15 Useful UI and UX Tools and Resources for Designers -- 未分配]()
