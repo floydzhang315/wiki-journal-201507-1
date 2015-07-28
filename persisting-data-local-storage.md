@@ -1,4 +1,5 @@
 # 使用 ionic 将数据保存到本地存储中   --   周倍同 
+![01](images/Persisting Data to Local Storage - Blog Header.png)  
 来源：https://www.packtpub.com/books/content/persisting-data-local-storage-ionic  
 时间：2015年7月23日  
 作者：TROY MILES  
