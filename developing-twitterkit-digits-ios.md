@@ -81,3 +81,4 @@ TwitterKit 是否能被广泛的接受和使用还有待观察，但另一方面
 上文中我们简短的演示了一下如何通过 iOS 的开发语言 Swift 来使用 Twitter 的 SDK，除此之外还有 Android 的 SDK 版本。据 Twitter公布，网页版的 SDK 正在准备当中。
 
 总的来说，TwitterKit 和 Digits 是很值得慢慢去探索的，同样的还有 Fabric 开发套件中提供的其他工具，包括 analytics 和 beta-distribution 工具等等。
+
