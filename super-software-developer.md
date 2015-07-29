@@ -2,11 +2,13 @@
 
 ![01](images/super-software-developer.jpg)
 
-原文地址：[https://www.linkedin.com/pulse/how-become-great-software-developer-jason-roell](https://www.linkedin.com/pulse/how-become-great-software-developer-jason-roell)
+文章翻译 ：[杨旋](https://github.com/yangxuanxc)
 
-时间：2015年7月21日
+发表时间：2015 年 7 月 21 日
 
-作者：[Jason Roell](https://www.linkedin.com/pub/jason-roell/17/308/478?trk=pulse-det-athr_prof-art_hdr) 在 Great American Insurance 任职的高级软件工程师
+原文作者：[Jason Roell](https://www.linkedin.com/pub/jason-roell/17/308/478?trk=pulse-det-athr_prof-art_hdr) 在 Great American Insurance 任职的高级软件工程师
+
+文章分类：职业规划与加薪
 
 ## 关于本文
 
@@ -177,3 +179,11 @@
 **做** — — 在这一路走来的过程，不只是学习，还要做。把你正在学习的一切付诸行动。留出一部分时间来练习你的技巧以及编写代码来创建一些东西。你可以阅读所有学习打高尔夫球的书籍，但是如果你不挥动球棒去练习，你永远不会成为 Tiger Woods。 
 
 如果你喜欢这篇文章，请花一分钟把它分享给你认为可能会对他们很有用或者会订阅我的博客 [@ jasonroell.com ](http://jasonroell.com/) 的人或跟随我的 LinkedIn 账号。让我知道在你们的评论中来了解你们在软件开发者的旅程的收获吧！
+
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[https://www.linkedin.com/pulse/how-become-great-software-developer-jason-roell](https://www.linkedin.com/pulse/how-become-great-software-developer-jason-roell)

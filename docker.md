@@ -40,7 +40,7 @@ Docker 中可能还会有很多其他的要素让我爱上它。
 
 正如你所预料的，“Hello World”这个例子同样是被声明和打包过的（像之前提到的，docker 化）。为了让 “Hello World” 运行起来，只需要执行下面的命令：
 
-```docker
+```javascript
 docker run ubuntu:14.04 /bin/echo 'Hello world'
 ```
 
@@ -50,7 +50,7 @@ docker run ubuntu:14.04 /bin/echo 'Hello world'
 
 像上面提到的，这个容器在输出完成后就会消失，但是仍在运行中。如果你执行以下代码，你就会发现那个容器。
 
-```docker
+```javascript
 docker ps -a
 ```
 
@@ -58,13 +58,13 @@ docker ps -a
 
 通过运行基于我们从 docker ps output 获得到的容器 ID 的命令，我们能开启对应的容器。
 
-```docker
+```javascript
 docker start --attach 6a174ac370a2
 ```
 
 我们同样用 [--attach switch](https://docs.docker.com/reference/commandline/start/) 连接到 STDOUT/STDERR 和之前的 signals，这就是为什么我们能看见 hello world 写在我们的控制台里。接下来让我们看一个更加实用的容器相关的例子。
 
-```docker
+```javascript
 docker run -d ubuntu:14.04 /bin/sh -c "while true; do echo hello world; sleep 1; done"
 ```
 
@@ -75,7 +75,7 @@ docker run -d ubuntu:14.04 /bin/sh -c "while true; do echo hello world; sleep 1;
 
 执行以下基于容器 ID 的代码，我们可以连接到一个正在运行中的容器的 STDOUT/STDERR。
 
-```docker
+```javascript
 docker attach ff2847155ced
 ```
 
@@ -91,7 +91,7 @@ docker attach ff2847155ced
 
 之前提到的，Docker 能够很容易的引入文件并且使用它们。比如说， [Redis is on Docker registry](https://registry.hub.docker.com/_/redis/)，我将它作为另外一个容器运行。
 
-```
+```javascript
 docker run --name my-redis -d redis:3.0.2
 ```
 
@@ -103,7 +103,7 @@ docker run --name my-redis -d redis:3.0.2
 
 我们可以看见 TCP 端口 6379 被展示了出来，这正是 Redis 展示的端口。然而，我需要知道这个 host 的 IP 地址去连接到 Redis instance。我们可以通过 [inspect command](https://docs.docker.com/reference/commandline/inspect/) 得到一个正在运行的容器的 IP 地址。
 
-```
+```javascript
 docker inspect --format '{{ .NetworkSettings.IPAddress }}' dfaf0cf33467
 ```
 
@@ -111,7 +111,7 @@ docker inspect --format '{{ .NetworkSettings.IPAddress }}' dfaf0cf33467
 
 现在我可以使用我安装的我的 host 中的 [redis-cli tool](http://redis.io/commands) 来连接到 Redis instance。
 
-```
+```javascript
 redis-cli -h 172.17.0.10 -p 6379
 ```
 
@@ -119,7 +119,7 @@ redis-cli -h 172.17.0.10 -p 6379
 
 我随时都能选择开启或者结束运行容器。几乎所有的事情都可以遵循这样的一个过程（比如 Ruby, GoLang, Elasticsearch, MongoDB, RabbitMQ, you-name-your-thing 等等）。比如说，在 Python 的开发环境中，你可以执行下面的 docker 运行命令：
 
-```
+```javascript
 docker run -t -i python:2.7.10 /bin/bash
 ```
 
@@ -137,7 +137,7 @@ docker run -t -i python:2.7.10 /bin/bash
 
 拿一个应用举例子，我选择将基于 [Node.js](https://nodejs.org/) 的 [Octopus Deploy Library Web application](https://github.com/OctopusDeploy/Library) docker 化。我们需要通过 [Dockerfile](https://docs.docker.com/reference/builder/) 来实现。Dockerfile 是一份精心编写的文档，下面就是在 Octopus Deploy library 中如何应用 Dockerfile：
 
-```
+```javascript
 FROM node:0.12.7
 
 RUN ["npm", "install", "gulp", "-g"]
@@ -161,7 +161,7 @@ ENTRYPOINT ["gulp"]
 
 现在我们就能开始 [build](https://docs.docker.com/reference/commandline/build/) 我们的 application image：
 
-```
+```javascript
 docker build -t octopus-library .
 ```
 
@@ -169,7 +169,7 @@ docker build -t octopus-library .
 
 如果一切进展良好的话，应用搭建和创建 image 就开始了。最后，我们可以用同样的运行命令来启动 container ，让它在我们的 host 下运行：
 
-```
+```javascript
 docker run -t -d -p 4040:4000 octopus-library
 ```
 
