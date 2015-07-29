@@ -35,7 +35,7 @@
   
 那么让我们研究一下一个 CQL 表的数据分布是什么样的。我们将以一个简化过的例子开始，它来自用 Cassandra 建立一项音乐服务的教程指南。我们已经用一个（id，song_id）的指针把表减少到只有一个 id，音乐 id 和歌曲名称。  
   
-```
+```javascript
 CREATE TABLE playlists_1 (   id uuid,   song_id uuid, title text,
 PRIMARY KEY  (id, song_id )
 );
@@ -54,7 +54,7 @@ INSERT INTO playlists_1 (id, song_id, title)
   
 现在让我们来看一下它的数据分布是什么样的。我们将使用 sstable2json 来把原始 sstable 转储成一个我们可以分析的格式：  
   
-```
+```javascript
 $ sstable2json Metrics/playlists_1/*Data*
 
 [
@@ -97,7 +97,7 @@ $ sstable2json Metrics/playlists_1/*Data*
   
 让我们来比较一下使用压缩存储选项的同一个表，再看看同一排的存储格式看起来是什么样。  
   
-```
+```javascript
 CREATE TABLE playlists_2 (   id uuid,   song_id uuid, title text,
 PRIMARY KEY  (id, song_id )
 ) WITH COMPACT STORAGE;
@@ -158,7 +158,7 @@ INSERT INTO playlists_2 (id, song_id, title)
   
 如下所示，您不可以越过主关键字创建一个以上的列。因为我们看到压缩存储在存储模式中生成了一个列，您被单一行关键字，单一列关键字（作为多列组成部分）和单一列数据值的限制所拦住了。  
   
-```
+```javascript
 cqlsh:Metrics> CREATE TABLE playlists_3 (   id uuid,   song_id uuid,
            ... title text, artist text,
            ... PRIMARY KEY  (id, song_id )
@@ -173,7 +173,7 @@ Bad Request: COMPACT STORAGE with composite PRIMARY KEY allows no more than one 
   
 和之前那一点类似，一个由压缩存储构建的表在它被创建之后不能变动。举个例子，使用压缩存储时你不能对一个表增加或者移除列：  
   
-```
+```javascript
 cqlsh:Metrics> alter table playlists_1 DROP title;
 cqlsh:Metrics> alter table playlists_2 DROP title;
 Bad Request: Cannot drop columns from a COMPACT STORAGE table
