@@ -1,4 +1,4 @@
-# 翻译前请务必先阅读[统一合作规范](https://github.com/yangxuanxc/guide-for-yangxuan/blob/master/guide.md) 
+# 翻译前请务必先阅读[统一协作规范](https://github.com/yangxuanxc/guide-for-yangxuan/blob/master/guide.md) 
 
 - 移动应用开发
   - [使用 ionic 将数据保存到本地存储中 -- 周倍同（已校对）](persisting-data-local-storage.md)
