@@ -18,13 +18,13 @@
 - 游戏开发
   - [在游戏开发中获得成功 -- 张鸿飞 （已校对） ](games-development.md)
 - 智能硬件
-  - [How to develop a simple Android Wear app -- 邵凯阳 待校对](android-wear-app.md)
+  - [如何开发一个简单的 Android Wear 应用程序 -- 邵凯阳 待校对](android-wear-app.md)
 - 云计算与安全
-  - [Playing Around with Docker: Hello World, Development Environment and Your Application -- 周倍同（已校对）](docker.md)
-  - [How to use the Android Keystore to store passwords and other sensitive information -- 赵洁（已校对） ](android-ketstore.md)
+  - [玩转 Dcoker：Hello World, 开发环境和你的应用 -- 周倍同（已校对）](docker.md)
+  - [如何使用安卓密钥库存储密码和其他敏感信息 -- 赵洁（已校对） ](android-ketstore.md)
 - 全球技术头条
   - [DevTools 摘要: 处理条带化数据时给条带化数据的一个新家-- 王韬懿（已校对）](throttling.md)
-  - [4 reasons why Google joined OpenStack -- 张月（已校对）](openstack.md)
+  - [谷歌加入 OpenStack 基金会的 4 个理由 -- 张月（已校对）](openstack.md)
 - 产品与设计
   - [15 Useful UI and UX Tools and Resources for Designers -- 邵凯阳（待校对）](tools-resources.md)
   - [5 tips for designing a brilliant Apple Watch app -- 朱瀚杰 （待校对）](apple-watch.md)
