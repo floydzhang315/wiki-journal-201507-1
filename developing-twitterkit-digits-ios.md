@@ -1,6 +1,6 @@
 # 在 iOS 开发中使用 TWITTERKIT & DIGITS
 
-
+![01](images/website-banner_3.png)
 
 来源：https://www.packtpub.com/books/content/developing-twitterkit-digits-ios
 
@@ -16,7 +16,7 @@
 
 ### 什么是 TwitterKit & Digits？
 
-在本文中，我们会接触到 Twitter 在今年早些时候发布的新的登录 API，TwitterKit 和 Digits，封装为 Fabric 这以整套开发套件的一部分，同样也为你提供了两段简短的代码让你能在你的 iOS App 中引入 Twitter 的登录机制。
+在本文中，我们会接触到 Twitter 在今年早些时候发布的新的[登录](https://dev.twitter.com/products/signin) API，TwitterKit 和 Digits，封装为 [Fabric](https://fabric.io/) 这以整套开发套件的一部分，同样也为你提供了两段简短的代码让你能在你的 iOS App 中引入 Twitter 的登录机制。
 
 ![](images/developing-twitterkit-digits-ios-1.png)
 
@@ -24,7 +24,7 @@ Facebook 和 Google 通过他们在 iOS 开发中的 SDK 或者 Accounts.framewo
 
 通过允许用户通过 Twitter 账号登录，开发者会获得用户的 Twitter 信息和发布的推文以及人际关系。只要 Twitter 账号得到确认，App 就能通过账号、接触用户的推文记录或者联想一些特定的关键字或标签让用户更好的参与进来。
 
-除了提供单点登录，Twitter 同样也提供了 Digits，允许用户通过使用电话号码实现匿名登录，与 Facebook 新的匿名登录 API 有异曲同工之处。
+除了提供单点登录，Twitter 同样也提供了 [Digits](https://dev.twitter.com/products/digits)，允许用户通过使用电话号码实现匿名登录，与 Facebook 新的[匿名登录 API](https://developers.facebook.com/products/anonymous-login/) 有异曲同工之处。
 
 ![](images/developing-twitterkit-digits-ios-2.png)
 
@@ -40,7 +40,7 @@ Digits 的基本原理是用户相信你的 App 或者网站，并提供他们�
 
 ### 通过 TwitterKit 登录
 
-Twitter 想要让他们的验证机制对开发者来说更加简单有效、更具吸引力，事实上他们正是这么做的。通过使用 SDK 作为 Twitter 的 Fabric 开发套件的一部分，你需要将你的 Twitter App 准备就绪，为了使用提供的 SDK 而注册。TwitterKit 目的是使用 Accounts.framework 对 iOS 上存在的 Twitter 账号施加影响。Accounts.framework 是使用比较广泛的一个基础框架，作为替代可以使用 OAuth 机制。
+Twitter 想要让他们的验证机制对开发者来说更加简单有效、更具吸引力，事实上他们正是这么做的。通过使用 SDK 作为 Twitter 的 [Fabric](https://get.fabric.io/) 开发套件的一部分，你需要将你的 Twitter App 准备就绪，为了使用提供的 SDK 而注册。TwitterKit 目的是使用 [Accounts.framework](https://get.fabric.io/) 对 iOS 上存在的 Twitter 账号施加影响。Accounts.framework 是使用比较广泛的一个基础框架，作为替代可以使用 [OAuth](https://en.wikipedia.org/wiki/OAuth) 机制。
 
 使用 Twitter 验证登录的最简单的方法就通过创建的按钮，TWTRLogInButton，下面我们就通过使用 iOS 的 Swift 语言来试一下。
 
@@ -80,9 +80,9 @@ let authenticationButton = TWTRLogInButton(logInCompletion:
 
 TwitterKit 是否能被广泛的接受和使用还有待观察，但另一方面，TwitterKit 能为开发者提供更多的选择，包括 Facebook 和 Google+  的登录机制在内，用户可以选择他们比较相信的社交媒体账号作为自己的登录验证。
 
-提供一种匿名登录方式的意图正好与如今世界对隐私的重视相契合，Digits无疑提供了一种不会造成信息泄露的登录方式，用户能直接的使用自己的电话号码进行登录。
+提供一种匿名登录方式的意图正好与如今世界对隐私的重视相契合，Digits 无疑提供了一种不会造成信息泄露的登录方式，用户能直接的使用自己的电话号码进行登录。
 
-上文中我们简短的演示了一下如何通过 iOS 的开发语言 Swift 来使用 Twitter 的 SDK，除此之外还有 Android 的 SDK 版本。据 Twitter公布，网页版的 SDK 正在准备当中。
+上文中我们简短的演示了一下如何通过 iOS 的开发语言 Swift 来使用 Twitter 的 SDK，除此之外还有 Android 的 SDK 版本。据 Twitter 公布，网页版的 SDK 正在准备当中。
 
 总的来说，TwitterKit 和 Digits 是很值得慢慢去探索的，同样的还有 Fabric 开发套件中提供的其他工具，包括 analytics 和 beta-distribution 工具等等。
 
