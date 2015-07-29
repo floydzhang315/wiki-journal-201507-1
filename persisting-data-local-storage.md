@@ -22,7 +22,7 @@
 
 接下来，我们使用一个 Angular Value object 来保存设置。value（值）是 angular 的提供者，就像工厂、服务、提供者和常量一样。和常量不同的是，values 是可以改变的。所以 value 能让我们很好的保存我们的 settings object ，同时我们输入的值充当默认值。
 
-```html5
+```javascript
 angular.module('starter')
    .value("Settings", {
        searchRadius: {value: "5"},
@@ -38,7 +38,7 @@ angular.module('starter')
 
 Local Storage 做的最后一件事就是在启动的过程中调用 deserializeSettings，并赋予 settings object 上一次存储的值。如何没有任何保存的值，那么就使用存储在 value 中的 Settings object。另外一个需要解释的点就是为什么我们在使用 angular extend 时要复制属性而不是简单的将整个对象拷贝过来。如果我们曾经修改过整个 angular value object，它就会变回到默认值，做出的更改也就失效了。我们可以选择写一个函数来复制这些属性，但是 angular extend 拷贝属性的方式正是我们需要的。
 
-```android
+```javascript
 function deserializeSettings() {
    var newSettings, rawSettings = localStorage[settings];
    if(rawSettings) {
@@ -54,7 +54,7 @@ function deserializeSettings() {
 
 在 Settings controller 中，我们将 Settings object 中的 values 与界面中的 widget 绑定在一起。将 $scope object 和 Settings object 的属性取成相同名字，会让更新属性值变得更容易，如果我们使用 JavaScript 括号表示法来访问对象的话，我们就能同时访问 $scope object 和 Settings object。当任何一个 widget 的 value 发生改变的时候，onChange 方法就会被调用，然后我们就可以用到之前提到的方法同时访问两个对象。
 
-```android
+```javascript
 if (!Settings.hasUserSeenMessage) {
    Settings.hasUserSeenMessage = true;
    LocalStorageService.serializeSettings();
