@@ -2,9 +2,9 @@
 
 ![01](images/Persisting Data to Local Storage - Blog Header.png)  
 
-文章翻译：周倍同 
-发表时间：2015年7月23日  
-原文作者：TROY MILES  
+文章翻译：周倍同    
+发表时间：2015年7月23日     
+原文作者：TROY MILES     
 
 ## 关于本文
 如今越来越多的移动 App 采取使用 HTML5 的方式来进行开发，同时还有一部分的 Web App 是通过浏览器来访问的，这就使得用户在离线的状态下无法使用 App 。本文要介绍的就是通过使用 ionic 将数据保存到本地中，实现离线存储，这样即使在离线的情况下用户也能正常使用 App。
@@ -74,8 +74,8 @@ $scope.onChange = function (type, value) {
 
 我们也演示了如何系统的保存变量。在代码中，hasUserSeenMessage 属性会被检查。如果用户没有看见我们发送的一次性消息，我们就会将 value 设为 true，将 value 保存在本地存储中，然后再次显示消息、任何时候你想要保存设置，只要调用 LocalStorageService.serializeSettings 就行了。
 
-> 版权声明：
-> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接
-> 商业合作请联系 wiki@jikexueyuan.com
-> 原文地址：[https://www.packtpub.com/books/content/persisting-data-local-storage-ionic](https://www.packtpub.com/books/content/persisting-data-local-storage-ionic)
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[https://www.packtpub.com/books/content/persisting-data-local-storage-ionic](https://www.packtpub.com/books/content/persisting-data-local-storage-ionic)   
 
