@@ -3,7 +3,7 @@
 - 移动应用开发
   - [使用 ionic 将数据保存到本地存储中 -- 周倍同（已校对）](persisting-data-local-storage.md)
   - [运行时的挂钩 C 函数 -- 邵凯阳 （已校对）](hooking-c-functions-at-runtime.md)
-  - [在 iOS 开发中使用 TWITTERKIT & DIGITS -- 周倍同 待校对](developing-twitterkit-digits-ios.md)
+  - [在 iOS 开发中使用 TWITTERKIT & DIGITS -- 周倍同 （已校对）](developing-twitterkit-digits-ios.md)
   - [用 Go 语言来看 Android！ 出发，Android。 -- 王韬懿（已校对）](go-mobile-intro.md)
 - Web 开发
   - [不懂 JavaScript？那你就不是一个 Web 开发者--张月（已校对）](web-developer.md)
