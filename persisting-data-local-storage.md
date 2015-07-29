@@ -1,8 +1,12 @@
 # 使用 ionic 将数据保存到本地存储中   --   周倍同 
+
 ![01](images/Persisting Data to Local Storage - Blog Header.png)  
-来源：https://www.packtpub.com/books/content/persisting-data-local-storage-ionic  
-时间：2015年7月23日  
-作者：TROY MILES  
+
+文章翻译：[周倍同](https://github.com/tmac1997) 
+
+发表时间：2015 年 7 月 23 日  
+
+原文作者：TROY MILES  
 
 ## 关于本文
 如今越来越多的移动 App 采取使用 HTML5 的方式来进行开发，同时还有一部分的 Web App 是通过浏览器来访问的，这就使得用户在离线的状态下无法使用 App 。本文要介绍的就是通过使用 ionic 将数据保存到本地中，实现离线存储，这样即使在离线的情况下用户也能正常使用 App。
@@ -16,7 +20,7 @@
 
 接下来，我们使用一个 Angular Value object 来保存设置。value（值）是 angular 的提供者，就像工厂、服务、提供者和常量一样。和常量不同的是，values 是可以改变的。所以 value 能让我们很好的保存我们的 settings object ，同时我们输入的值充当默认值。
 
-```
+```html5
 angular.module('starter')
    .value("Settings", {
        searchRadius: {value: "5"},
@@ -32,7 +36,7 @@ angular.module('starter')
 
 Local Storage 做的最后一件事就是在启动的过程中调用 deserializeSettings，并赋予 settings object 上一次存储的值。如何没有任何保存的值，那么就使用存储在 value 中的 Settings object。另外一个需要解释的点就是为什么我们在使用 angular extend 时要复制属性而不是简单的将整个对象拷贝过来。如果我们曾经修改过整个 angular value object，它就会变回到默认值，做出的更改也就失效了。我们可以选择写一个函数来复制这些属性，但是 angular extend 拷贝属性的方式正是我们需要的。
 
-```
+```android
 function deserializeSettings() {
    var newSettings, rawSettings = localStorage[settings];
    if(rawSettings) {
@@ -48,7 +52,7 @@ function deserializeSettings() {
 
 在 Settings controller 中，我们将 Settings object 中的 values 与界面中的 widget 绑定在一起。将 $scope object 和 Settings object 的属性取成相同名字，会让更新属性值变得更容易，如果我们使用 JavaScript 括号表示法来访问对象的话，我们就能同时访问 $scope object 和 Settings object。当任何一个 widget 的 value 发生改变的时候，onChange 方法就会被调用，然后我们就可以用到之前提到的方法同时访问两个对象。
 
-```
+```android
 if (!Settings.hasUserSeenMessage) {
    Settings.hasUserSeenMessage = true;
    LocalStorageService.serializeSettings();
@@ -71,3 +75,8 @@ $scope.onChange = function (type, value) {
 ```
 
 我们也演示了如何系统的保存变量。在代码中，hasUserSeenMessage 属性会被检查。如果用户没有看见我们发送的一次性消息，我们就会将 value 设为 true，将 value 保存在本地存储中，然后再次显示消息、任何时候你想要保存设置，只要调用 LocalStorageService.serializeSettings 就行了。
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[https://www.packtpub.com/books/content/persisting-data-local-storage-ionic ](https://www.packtpub.com/books/content/persisting-data-local-storage-ionic )
