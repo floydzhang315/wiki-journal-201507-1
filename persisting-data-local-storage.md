@@ -3,7 +3,7 @@
 
 ![01](images/Persisting Data to Local Storage - Blog Header.png)  
 
-文章翻译：[周倍同](https://github.com/tmac1997) 
+文章翻译：[周倍同](https://github.com/tmac1997)    
 发表时间：2015 年 7 月 23 日  
 原文作者：TROY MILES  
 文章分类：移动应用开发
