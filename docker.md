@@ -1,10 +1,12 @@
 # 玩转 Dcoker：Hello World, 开发环境和你的应用  -- 周倍同
 
-来源：http://www.tugberkugurlu.com/archive/playing-around-with-docker-hello-world-development-environment-and-your-application
+文章翻译：[周倍同](https://github.com/tmac1997)
 
-时间：2015年7月13日
+发表时间：2015 年 7 月 13 日
 
-作者：Tugberk Ugurlu
+原文作者：Tugberk Ugurlu
+
+文章分类：云计算与安全
 
 ## 关于本文
 
@@ -38,7 +40,7 @@ Docker 中可能还会有很多其他的要素让我爱上它。
 
 正如你所预料的，“Hello World”这个例子同样是被声明和打包过的（像之前提到的，docker 化）。为了让 “Hello World” 运行起来，只需要执行下面的命令：
 
-```
+```docker
 docker run ubuntu:14.04 /bin/echo 'Hello world'
 ```
 
@@ -48,7 +50,7 @@ docker run ubuntu:14.04 /bin/echo 'Hello world'
 
 像上面提到的，这个容器在输出完成后就会消失，但是仍在运行中。如果你执行以下代码，你就会发现那个容器。
 
-```
+```docker
 docker ps -a
 ```
 
@@ -56,13 +58,13 @@ docker ps -a
 
 通过运行基于我们从 docker ps output 获得到的容器 ID 的命令，我们能开启对应的容器。
 
-```
+```docker
 docker start --attach 6a174ac370a2
 ```
 
 我们同样用 [--attach switch](https://docs.docker.com/reference/commandline/start/) 连接到 STDOUT/STDERR 和之前的 signals，这就是为什么我们能看见 hello world 写在我们的控制台里。接下来让我们看一个更加实用的容器相关的例子。
 
-```
+```docker
 docker run -d ubuntu:14.04 /bin/sh -c "while true; do echo hello world; sleep 1; done"
 ```
 
@@ -73,7 +75,7 @@ docker run -d ubuntu:14.04 /bin/sh -c "while true; do echo hello world; sleep 1;
 
 执行以下基于容器 ID 的代码，我们可以连接到一个正在运行中的容器的 STDOUT/STDERR。
 
-```
+```docker
 docker attach ff2847155ced
 ```
 
@@ -176,3 +178,11 @@ docker run -t -d -p 4040:4000 octopus-library
 ![](images/docker-13.png)
 
 你可以通过复制我的 [my fork of Octopus Library and switching to docker branch](https://github.com/tugberkugurlu/Library/tree/docker) 来重复我之前同样的步骤。
+
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[http://www.tugberkugurlu.com/archive/playing-around-with-docker-hello-world-development-environment-and-your-application](http://www.tugberkugurlu.com/archive/playing-around-with-docker-hello-world-development-environment-and-your-application)
