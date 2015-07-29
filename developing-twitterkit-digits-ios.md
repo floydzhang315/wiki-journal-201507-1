@@ -57,7 +57,7 @@ let authenticationButton = TWTRLogInButton(logInCompletion:
 })
 ```
 
-整段代码非常简单，创建了 一个 TWTRLoginButton 子类，可以增加你的视图层次，实现与用户之间的交互。
+整段代码非常简单，创建了一个 TWTRLoginButton 子类，可以增加你的视图层次，实现与用户之间的交互。
 
 ### 通过 Digits 登录 
 

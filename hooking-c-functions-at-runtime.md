@@ -10,17 +10,17 @@
 
 ## 关于文本
 
-钩子（Hook)是 Windows 消息处理机制的一个平台，该技术可以实现对消息的监视，具有很强大的功能。本文就是基于钩子的主要功能实现钩子在 C 中的应用，主要介绍了运行是挂钩 C 函数的基本步骤、相关代码和一些局限性。
+钩子(Hook)是 Windows 消息处理机制的一个平台，该技术可以实现对消息的监视，具有很强大的功能。本文就是基于钩子的主要功能实现钩子在 C 中的应用，主要介绍了运行时挂钩 C 函数的基本步骤、相关代码和一些局限性。
 
 ## 文章内容
 
-这是一份我最近尝试的关于在 C 中运行时函数挂钩的快速记录。对于钩入一个函数最基本的思想是用您自己的代码替换函数的代码，所以在调用该函数时，您的代码将被执行。运行时挂钩允许您更改程序的运行方式当被执行的程序没有自己的代码或者没有以任何方式对其文件进行实际修改的时候。运行时函数挂钩并不少见，并且用于 iOS 越狱调整(通过 [Cydia Substrate](http://www.cydiasubstrate.com/) 或[Substitute](https://github.com/comex/substitute) 平台提供技术支持)以及  [Xposed 框架](http://repo.xposed.info/module/de.robv.android.xposed.installer) 在 Android 程序中的使用。
+这是一份我最近尝试的关于在 C 中运行时函数挂钩的快速记录。对于钩入一个函数最基本的思想是用您自己的代码替换函数的代码，所以在调用该函数时，您的代码将被执行。运行时挂钩允许您在被执行的程序没有自己的代码或者没有以任何方式对其文件进行实际修改的时候更改程序的运行方式。运行时函数挂钩并不少见，并且用于 iOS 越狱调整(通过 [Cydia Substrate](http://www.cydiasubstrate.com/) 或 [Substitute](https://github.com/comex/substitute) 平台提供技术支持)以及 [Xposed 框架](http://repo.xposed.info/module/de.robv.android.xposed.installer) 在 Android 程序中的使用。
 
-如果您想在您自己的计算机上跟随了解这篇文章，您需要使用 Xcode 和 Xcode 命令行工具安装的 Mac。这些代码能够在[Github](http://repo.xposed.info/module/de.robv.android.xposed.installer)上找到。
+如果您想在您自己的计算机上了解这篇文章，您需要使用 Xcode 和 Xcode 命令行工具安装的 Mac。这些代码能够在 [Github](http://repo.xposed.info/module/de.robv.android.xposed.installer) 上找到。
 
 ### 示例程序
 
-```javascript
+```C
 //testProgram.c
 #include <stdio.h>
 
@@ -50,7 +50,7 @@ The number is: 5
 
 这个过程的第一步就是创建包含一个构造函数和一个替换函数的动态库。
 
-```javascript
+```C
 //inject.c
 #include <stdio.h>
 
@@ -65,9 +65,9 @@ static void ctor(void) {
 }
 ```
 
-当他和使用了 `DYLD_INSERT_LIBRARIES` 环境变量的目标程序被编译和加载后，我们能够看到他的构造函数在主程序之前被执行。
+当他使用了 `DYLD_INSERT_LIBRARIES` 环境变量的目标程序被编译和加载后，我们能够看到他的构造函数在主程序之前被执行。
 
-```javascript
+```shell
 $ ls
 inject.c    testProgram testProgram.c
 $ clang -dynamiclib inject.c -o inject.dylib
@@ -79,7 +79,7 @@ The number is: 5
 
 为了钩入目标函数，现在我们可以开始向构造函数中添加代码。由于 x86 跳转指令使用相对寻址，所以我们不能简单的在内存中给计算机一个地址让其跳转。首先，我们需要从目标函数中找到替换函数的抵消函数，这些可以通过获得进入每个函数的指针，然后从另一个指针中减去一个函数的指针。
 
-```javascript
+```C
 void *mainProgramHandle = dlopen(NULL, RTLD_NOW);
 int64_t *origFunc = dlsym(mainProgramHandle , "hookTargetFunction");
 int64_t *newFunc = (int64_t*)&hookReplacementFunction;
@@ -90,14 +90,14 @@ int32_t offset = (int64_t)newFunc - ((int64_t)origFunc + 5 * sizeof(char));
 
 在这篇文章中我省略了一小步，那就是使目标函数所在的内存是可写的，因为处于安全的考虑，在默认情况下内存仅仅是可读的和可执行的。一旦这些被完成，最后一步就是创建和插入跳转指令。x86 操作码是 E9，他与立即数偏移寻址一起是无条件跳转，因此我们将这作为指令的第一个字节，紧跟的是偏移。 
 
-```javascript
+```C
 int64_t instruction = 0xE9 | offset << 8;
 *origFunc = instruction;
 ```
 
 这里是完成的 `inject.c` 文件:
 
-```javascript
+```C
 #include <stdio.h>
 #include <dlfcn.h>
 #include <stdint.h>
@@ -133,7 +133,7 @@ static void ctor(void) {
 
 当他编译和执行完后，他确实改变了主程序的输出！
 
-```javascript
+```shell
 $ ls
 inject.c    testProgram testProgram.c
 $ ./testProgram 
@@ -147,7 +147,7 @@ The number is: 3
 
 这里是另外一个执行过程和一些调试输出，显示了跳转指令插入目标函数的开始：
 
-```javascript
+```shell
 $ DYLD_INSERT_LIBRARIES=inject.dylib ./testProgram
 Original function address: 0x1078abee0
 Replacement function address: 0x1078b4c40
