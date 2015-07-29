@@ -2,6 +2,7 @@
 ![01](images/openstack-01.jpg)  
 来源：http://www.infoworld.com/article/2948901/openstack/4-reasons-google-joined-openstack.html    
 时间：2015年7月17日  
+
 作者：Serdar Yegulalp  
 
 ##关于本文
