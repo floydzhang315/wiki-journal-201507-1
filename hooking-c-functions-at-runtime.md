@@ -12,9 +12,9 @@
 
 ## 文章内容
 
-这是一份我最近尝试的关于在 C 中运行时函数挂钩的快速记录。对于钩入一个函数最基本的思想是用您自己的代码替换函数的代码，所以在调用该函数时，您的代码将被执行。运行时挂钩允许您在被执行的程序没有自己的代码或者没有以任何方式对其文件进行实际修改的时候更改程序的运行方式。运行时函数挂钩并不少见，并且用于 iOS 越狱调整(通过 [Cydia Substrate](http://www.cydiasubstrate.com/) 或[Substitute](https://github.com/comex/substitute) 平台提供技术支持)以及 [Xposed 框架](http://repo.xposed.info/module/de.robv.android.xposed.installer) 在 Android 程序中的使用。
+这是一份我最近尝试的关于在 C 中运行时函数挂钩的快速记录。对于钩入一个函数最基本的思想是用您自己的代码替换函数的代码，所以在调用该函数时，您的代码将被执行。运行时挂钩允许您在被执行的程序没有自己的代码或者没有以任何方式对其文件进行实际修改的时候更改程序的运行方式。运行时函数挂钩并不少见，并且用于 iOS 越狱调整(通过 [Cydia Substrate](http://www.cydiasubstrate.com/) 或 [Substitute](https://github.com/comex/substitute) 平台提供技术支持)以及 [Xposed 框架](http://repo.xposed.info/module/de.robv.android.xposed.installer) 在 Android 程序中的使用。
 
-如果您想在您自己的计算机上了解这篇文章，您需要使用 Xcode 和 Xcode 命令行工具安装的 Mac。这些代码能够在 [Github](http://repo.xposed.info/module/de.robv.android.xposed.installer)上找到。
+如果您想在您自己的计算机上了解这篇文章，您需要使用 Xcode 和 Xcode 命令行工具安装的 Mac。这些代码能够在 [Github](http://repo.xposed.info/module/de.robv.android.xposed.installer) 上找到。
 
 ### 示例程序
 
