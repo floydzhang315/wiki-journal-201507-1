@@ -2,11 +2,13 @@
 
 ![01](images/website-banner_3.png)
 
-来源：https://www.packtpub.com/books/content/developing-twitterkit-digits-ios
+文章翻译 ：[周倍同](https://github.com/tmac1997)
 
-时间：2015年7月20日
+发表时间：2015 年 7 月 20 日 
 
-作者：DORON KATZ
+原文作者：DORON KATZ
+
+文章分类：移动应用开发
 
 ## 关于本文
 
@@ -86,3 +88,10 @@ TwitterKit 是否能被广泛的接受和使用还有待观察，但另一方面
 
 总的来说，TwitterKit 和 Digits 是很值得慢慢去探索的，同样的还有 Fabric 开发套件中提供的其他工具，包括 analytics 和 beta-distribution 工具等等。
 
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[https://www.packtpub.com/books/content/developing-twitterkit-digits-ios](https://www.packtpub.com/books/content/developing-twitterkit-digits-ios)
