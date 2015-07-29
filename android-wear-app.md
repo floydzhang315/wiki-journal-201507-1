@@ -291,3 +291,4 @@ public class WearActivity extends Activity {
 > 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接  
 > 商业合作请联系 wiki@jikexueyuan.com  
 > 原文地址：[https://www.packtpub.com/books/content/persisting-data-local-storage-ionic](https://www.packtpub.com/books/content/persisting-data-local-storage-ionic)  
+
