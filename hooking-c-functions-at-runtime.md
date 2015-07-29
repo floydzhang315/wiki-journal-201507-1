@@ -1,10 +1,12 @@
 # 运行时的挂钩 C 函数  --邵凯阳
 
-来源:http://thomasfinch.me/blog/2015/07/24/Hooking-C-Functions-At-Runtime.html  
+文章翻译：[邵凯阳](https://github.com/shaokaiyang) 
 
-时间：2015年7月27  
+发表时间：2015 年 7 月 27 日  
 
-作者：Thomas Finch
+原文作者：Thomas Finch
+
+文章分类：移动应用开发
 
 ## 关于文本
 
@@ -18,7 +20,7 @@
 
 ### 示例程序
 
-```   
+```javascript
 //testProgram.c
 #include <stdio.h>
 
@@ -35,7 +37,7 @@ int main() {
 
 编译和运行该程序可以得到下面的输出：
 
-```
+```javascript
 Calling original function!
 The number is: 5
 ```
@@ -48,7 +50,7 @@ The number is: 5
 
 这个过程的第一步就是创建包含一个构造函数和一个替换函数的动态库。
 
-```
+```javascript
 //inject.c
 #include <stdio.h>
 
@@ -65,7 +67,7 @@ static void ctor(void) {
 
 当他和使用了 `DYLD_INSERT_LIBRARIES` 环境变量的目标程序被编译和加载后，我们能够看到他的构造函数在主程序之前被执行。
 
-```
+```javascript
 $ ls
 inject.c    testProgram testProgram.c
 $ clang -dynamiclib inject.c -o inject.dylib
@@ -77,7 +79,7 @@ The number is: 5
 
 为了钩入目标函数，现在我们可以开始向构造函数中添加代码。由于 x86 跳转指令使用相对寻址，所以我们不能简单的在内存中给计算机一个地址让其跳转。首先，我们需要从目标函数中找到替换函数的抵消函数，这些可以通过获得进入每个函数的指针，然后从另一个指针中减去一个函数的指针。
 
-```
+```javascript
 void *mainProgramHandle = dlopen(NULL, RTLD_NOW);
 int64_t *origFunc = dlsym(mainProgramHandle , "hookTargetFunction");
 int64_t *newFunc = (int64_t*)&hookReplacementFunction;
@@ -88,14 +90,14 @@ int32_t offset = (int64_t)newFunc - ((int64_t)origFunc + 5 * sizeof(char));
 
 在这篇文章中我省略了一小步，那就是使目标函数所在的内存是可写的，因为处于安全的考虑，在默认情况下内存仅仅是可读的和可执行的。一旦这些被完成，最后一步就是创建和插入跳转指令。x86 操作码是 E9，他与立即数偏移寻址一起是无条件跳转，因此我们将这作为指令的第一个字节，紧跟的是偏移。 
 
-```
+```javascript
 int64_t instruction = 0xE9 | offset << 8;
 *origFunc = instruction;
 ```
 
 这里是完成的 `inject.c` 文件:
 
-```
+```javascript
 #include <stdio.h>
 #include <dlfcn.h>
 #include <stdint.h>
@@ -131,7 +133,7 @@ static void ctor(void) {
 
 当他编译和执行完后，他确实改变了主程序的输出！
 
-```
+```javascript
 $ ls
 inject.c    testProgram testProgram.c
 $ ./testProgram 
@@ -145,7 +147,7 @@ The number is: 3
 
 这里是另外一个执行过程和一些调试输出，显示了跳转指令插入目标函数的开始：
 
-```
+```javascript
 $ DYLD_INSERT_LIBRARIES=inject.dylib ./testProgram
 Original function address: 0x1078abee0
 Replacement function address: 0x1078b4c40
@@ -172,3 +174,10 @@ The number is: 3
  
 我希望您能够喜欢这篇文章！再一次，自由下载并且在您自己的计算机上测试这些代码。当您自己动手尝试时，您会体会到更多的乐趣！
 
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[http://thomasfinch.me/blog/2015/07/24/Hooking-C-Functions-At-Runtime.html ](http://thomasfinch.me/blog/2015/07/24/Hooking-C-Functions-At-Runtime.html )

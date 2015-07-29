@@ -1,10 +1,14 @@
-# 在游戏开发中获得成功 -- 张鸿飞
+# 在游戏开发中获得成功
 
 ![01](images/games-development-01.png)
 
-来源：https://www.packtpub.com/books/content/making-it-games-development  
-时间：2015年7月16日  
-作者：VENITA PEREIRA  
+文章翻译：[张鸿飞](https://github.com/zhangger)
+
+发表时间：2015 年 7 月 16 日  
+
+原文作者：VENITA PEREIRA  
+
+文章分类：游戏开发
 
 ## 关于本文
 
@@ -57,3 +61,10 @@ Venita的书-[《通过开发用例学习Unity 2D游戏》](https://www.packtpub
 
 在我们的[《应用和游戏开发薪酬与技能的报告》](https://www.packtpub.com/skillup/app-dev-salary-report)了解更多。
 
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[https://www.packtpub.com/books/content/making-it-games-development ](https://www.packtpub.com/books/content/making-it-games-development )
