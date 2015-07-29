@@ -1,10 +1,12 @@
 # 运行时的挂钩 C 函数  --邵凯阳
 
-来源:http://thomasfinch.me/blog/2015/07/24/Hooking-C-Functions-At-Runtime.html  
+文章翻译：[邵凯阳](https://github.com/shaokaiyang) 
 
-时间：2015年7月27  
+发表时间：2015 年 7 月 27 日  
 
-作者：Thomas Finch
+原文作者：Thomas Finch
+
+文章分类：移动应用开发
 
 ## 关于文本
 
@@ -172,3 +174,10 @@ The number is: 3
  
 我希望您能够喜欢这篇文章！再一次，自由下载并且在您自己的计算机上测试这些代码。当您自己动手尝试时，您会体会到更多的乐趣！
 
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[http://thomasfinch.me/blog/2015/07/24/Hooking-C-Functions-At-Runtime.html ](http://thomasfinch.me/blog/2015/07/24/Hooking-C-Functions-At-Runtime.html )
