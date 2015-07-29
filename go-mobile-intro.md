@@ -24,7 +24,7 @@
 
 一旦你要安装 Go 语言，你可以通过下面的命令行来安装：
 
-```
+```javascript
 go get golang.org/x/mobile/cmd/gomobile
 gomobile init
 ```
@@ -39,7 +39,7 @@ IOS 平台：很不幸的是 IOS 并不是 100% 适配，因此可能不会有�
 
 接下来的命令就会安装示例应用：
 
-```
+```javascript
 gomobile install golang.org/x/mobile/example/basic
 gomobile install golang.org/x/mobile/example/audio
 gomobile install golang.org/x/mobile/example/sprite 
@@ -50,7 +50,7 @@ gomobile install golang.org/x/mobile/example/sprite
 
 好，我们可以编译他人的代码，但是它在干什么？让我们看看在这个基本的示例应用里面发生了什么。
 
-```
+```javascript
 //excerpt from golang.org/x/mobile/example/basic
 func main() {
     app.Main(func(a app.App) {
