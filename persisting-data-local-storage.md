@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 使用 ionic 将数据保存到本地存储中   --   周倍同 
 
 ![01](images/Persisting Data to Local Storage - Blog Header.png)  
