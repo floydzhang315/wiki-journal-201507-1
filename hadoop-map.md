@@ -22,7 +22,7 @@
 
 表 keytable 只有一列叫作 key；它将是我们存储数据的地方。
 
-```
+```javascript
 CREATE KEYSPACE keytest WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };
 
 CREATE TABLE keytable (
@@ -33,7 +33,7 @@ PRIMARY KEY (key)
 
 这是它在运行之后的样子：
 
-```
+```javascript
 cqlsh> USE keytest;
 cqlsh:keytest> select * from keytable;
  key
@@ -50,7 +50,7 @@ cqlsh:keytest> select * from keytable;
 getSession():检索当前会话对象以确保没有其他会话对象被创建。
 
 
-```
+```javascript
 public Session getSession()  {
          LOG.info("Starting getSession()");
         if (this.session == null && (this.cluster == null || this.cluster.isClosed())) {
@@ -67,7 +67,7 @@ public Session getSession()  {
 createConnection(String): 为 Cassandra 服务器传递 host。
 
 
-```
+```javascript
 public void createConnection(String node)  {
 
         this.cluster = Cluster.builder().addContactPoint(node).build();
@@ -90,7 +90,7 @@ public void createConnection(String node)  {
 closeConnection(): 在一切都完成之后关闭连接。
 
 
-```
+```javascript
 public void closeConnection() {
         cluster.close();
     }
@@ -98,7 +98,7 @@ public void closeConnection() {
 
 prepareQueries():此方法准备的查询在服务器端进行了优化。如果您经常执行相同的查询或查询不会更改但数据可能改变，例如在插入操作时，它推荐您使用预查询。
 
-```
+```javascript
 private void prepareQueries()  {
         LOG.info("Starting prepareQueries()");
         this.preparedStatement = this.session.prepare(this.query);
@@ -107,7 +107,7 @@ private void prepareQueries()  {
 
 addKey(String):该方法将数据添加到群集，它还有try catch块捕获异常并告诉你正在发生什么。
 
-```
+```javascript
 public void addKey(String key) {
         Session session = this.getSession();
         
@@ -154,7 +154,7 @@ MapReduceExample.java 是这里的感兴趣的文件。它有一个 Mapper 类�
 
 如果您运行上述步骤，它应该启动这份工作。在工作完成之后，转到 cqlsh 并运行 select * from keytable limit 10;
 
-```
+```javascript
 cqlsh:keytest> select * from keytable limit 10;
 
  key
