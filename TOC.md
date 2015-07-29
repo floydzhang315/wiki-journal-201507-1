@@ -21,7 +21,7 @@
   - [How to develop a simple Android Wear app -- 邵凯阳](android-wear-app.md)
 - 云计算与安全
   - [Playing Around with Docker: Hello World, Development Environment and Your Application -- 周倍同（待校对）](docker.md)
-  - [How to use the Android Keystore to store passwords and other sensitive information -- 赵洁](android-ketstore.md)
+  - [How to use the Android Keystore to store passwords and other sensitive information -- 赵洁 （待校对）](android-ketstore.md)
 - 全球技术头条
   - [DevTools 摘要: 处理条带化数据时给条带化数据的一个新家-- 王韬懿（已校对）](throttling.md)
   - [4 reasons why Google joined OpenStack -- 张月](openstack.md)
