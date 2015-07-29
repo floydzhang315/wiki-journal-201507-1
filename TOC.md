@@ -11,7 +11,7 @@
   - [The Hitchhiker's Guide to Modern JavaScript Tooling--张鸿飞 ](javaScript-tooling.md)
   - [Useful Angular.js Tools -- 杨旋](useful-tool.md)
 - 后端开发
-  - [为什么是 Node.js ? 什么时候使用 Node.js ? -- 王韬懿 待校对](node-js.md)
+  - [为什么是 Node.js ? 什么时候使用 Node.js ? -- 王韬懿 （已校对）](node-js.md)
 - 大数据及商务智能
   - [理解 Cassandra 压缩储存的作用 -- 朱瀚杰（已校对） ](cassandra-compact-storage.md)
   - [从 HDFS 中使用分布式的 MAP REDUCE JOB 写入 CASSANDRA  -- 王运里（已校对）](hadoop-map.md)
@@ -29,7 +29,7 @@
   - [15 Useful UI and UX Tools and Resources for Designers -- 邵凯阳](tools-resources.md)
   - [5 tips for designing a brilliant Apple Watch app -- 朱瀚杰](apple-watch.md)
 - 职业规划与加薪
-  - [如何成为一个超级软件开发者 -- 杨旋 已校对](super-software-developer.md)
+  - [如何成为一个超级软件开发者 -- 杨旋 （已校对）](super-software-developer.md)
 
 ## [对应英文目录：原文](yuanwen.md)
 
