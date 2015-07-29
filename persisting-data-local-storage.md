@@ -76,8 +76,8 @@ $scope.onChange = function (type, value) {
 
 我们也演示了如何系统的保存变量。在代码中，hasUserSeenMessage 属性会被检查。如果用户没有看见我们发送的一次性消息，我们就会将 value 设为 true，将 value 保存在本地存储中，然后再次显示消息。任何时候你想要保存设置，只要调用 LocalStorageService.serializeSettings 就行了。
 
-> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)
-> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
 
 > 版权声明：   
 > 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
