@@ -1,10 +1,13 @@
-# 从 HDFS 中使用分布式的 MAP REDUCE JOB 写入 CASSANDRA   --   王运里
+# 从 HDFS 中使用分布式的 MAP REDUCE JOB 写入 CASSANDRA   
 
-作者：MANU MUKERJI  
+文章翻译：[王运里](https://github.com/jimth001)
 
-时间：2015年7月17日
+发表时间：2015 年 7 月 17 日
 
-原文地址：[https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job](https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job)
+原文作者：MANU MUKERJI  
+
+文章分类：大数据及商务智能
+
 ## 关于本文
 
 文章开头介绍了 Cassandra 中表的创建等基本知识。随后介绍了java 中对 Cassandra 的操作的库 CassandraHelper.java，CassandraTester.java，MapReduceExample.java，还有其中的 getSession()，createConnection(String)，closeConnection()，prepareQueries()，addKey(String) 等方法。文章最后，作者给出了一个他修改过的标准单词计数的示例，他将计数的数据写入到 Cassandra 中，并在 cqlsh 中查看了运行结果。作者在文章中详细地给出了运行此示例的步骤。此外，作者还在文章中提供了他对该示例测试时所用的数据集，您可以从 git 上获取它。
@@ -19,7 +22,7 @@
 
 表 keytable 只有一列叫作 key；它将是我们存储数据的地方。
 
-```
+```javascript
 CREATE KEYSPACE keytest WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };
 
 CREATE TABLE keytable (
@@ -30,7 +33,7 @@ PRIMARY KEY (key)
 
 这是它在运行之后的样子：
 
-```
+```javascript
 cqlsh> USE keytest;
 cqlsh:keytest> select * from keytable;
  key
@@ -47,7 +50,7 @@ cqlsh:keytest> select * from keytable;
 getSession():检索当前会话对象以确保没有其他会话对象被创建。
 
 
-```
+```javascript
 public Session getSession()  {
          LOG.info("Starting getSession()");
         if (this.session == null && (this.cluster == null || this.cluster.isClosed())) {
@@ -64,7 +67,7 @@ public Session getSession()  {
 createConnection(String): 为 Cassandra 服务器传递 host。
 
 
-```
+```javascript
 public void createConnection(String node)  {
 
         this.cluster = Cluster.builder().addContactPoint(node).build();
@@ -87,7 +90,7 @@ public void createConnection(String node)  {
 closeConnection(): 在一切都完成之后关闭连接。
 
 
-```
+```javascript
 public void closeConnection() {
         cluster.close();
     }
@@ -95,7 +98,7 @@ public void closeConnection() {
 
 prepareQueries():此方法准备的查询在服务器端进行了优化。如果您经常执行相同的查询或查询不会更改但数据可能改变，例如在插入操作时，它推荐您使用预查询。
 
-```
+```javascript
 private void prepareQueries()  {
         LOG.info("Starting prepareQueries()");
         this.preparedStatement = this.session.prepare(this.query);
@@ -104,7 +107,7 @@ private void prepareQueries()  {
 
 addKey(String):该方法将数据添加到群集，它还有try catch块捕获异常并告诉你正在发生什么。
 
-```
+```javascript
 public void addKey(String key) {
         Session session = this.getSession();
         
@@ -151,7 +154,7 @@ MapReduceExample.java 是这里的感兴趣的文件。它有一个 Mapper 类�
 
 如果您运行上述步骤，它应该启动这份工作。在工作完成之后，转到 cqlsh 并运行 select * from keytable limit 10;
 
-```
+```javascript
 cqlsh:keytest> select * from keytable limit 10;
 
  key
@@ -179,3 +182,11 @@ Manu Mukerji 有云计算和大数据方面的背景，实时处理数以亿计�
 [twitter:@next2manu](twitter:@next2manu)
 
 LinkedIn: [http://www.linkedin.com/in/manumukerji/](http://www.linkedin.com/in/manumukerji/)
+
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job](https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job)

@@ -1,16 +1,21 @@
 # 理解 Cassandra 压缩储存的作用  
   
-文章来源：[http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews](http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews)  
-时间：2015年7月23日  
-作者：mheffner  
-  
 ![01](images/cassandra-compact-storage01.jpg)  
+
+文章翻译：[朱瀚杰](https://github.com/Owligan) 
+
+发表时间：2015 年 7 月 23 日  
+
+原文作者：mheffner  
+
+文章分类：大数据及商务智能
   
-## 本文概要  
+## 关于本文  
   
 本文简单介绍了 Cassandra 上时间序列的存储，引入了压缩存储的概念并将压缩存储和非压缩存储方式用简单的例子进行了对比，得出了非压缩存储会消耗更多的存储空间的结论。文章同时提到不同的需求和条件下应该考虑选择不同的存储格式。  
   
-## 介绍  
+  
+## 文章内容  
 
 在 Librato，我们对时间序列的储存主要是应用我们一直在研发的自定义架构所建立的 Apache Cassandra。关于它我们之前已经[写到](http://blog.librato.com/posts/time-series-data)并[呈现](https://speakerdeck.com/mheffner/time-series-metrics-with-cassandra)过几次。在 Cassandra 上我们既存储真实的时间序列也存储历史汇总时间序列。Cassandra 存储节点在我们的基础设施中占有最大的足迹，因而这些节点驱动着我们的成本开支，所以我们一直在寻找方式来改进我们数据的效率。  
   
@@ -30,7 +35,7 @@
   
 那么让我们研究一下一个 CQL 表的数据分布是什么样的。我们将以一个简化过的例子开始，它来自用 Cassandra 建立一项音乐服务的教程指南。我们已经用一个（id，song_id）的指针把表减少到只有一个 id，音乐 id 和歌曲名称。  
   
-```
+```javascript
 CREATE TABLE playlists_1 (   id uuid,   song_id uuid, title text,
 PRIMARY KEY  (id, song_id )
 );
@@ -49,7 +54,7 @@ INSERT INTO playlists_1 (id, song_id, title)
   
 现在让我们来看一下它的数据分布是什么样的。我们将使用 sstable2json 来把原始 sstable 转储成一个我们可以分析的格式：  
   
-```
+```javascript
 $ sstable2json Metrics/playlists_1/*Data*
 
 [
@@ -92,7 +97,7 @@ $ sstable2json Metrics/playlists_1/*Data*
   
 让我们来比较一下使用压缩存储选项的同一个表，再看看同一排的存储格式看起来是什么样。  
   
-```
+```javascript
 CREATE TABLE playlists_2 (   id uuid,   song_id uuid, title text,
 PRIMARY KEY  (id, song_id )
 ) WITH COMPACT STORAGE;
@@ -153,7 +158,7 @@ INSERT INTO playlists_2 (id, song_id, title)
   
 如下所示，您不可以越过主关键字创建一个以上的列。因为我们看到压缩存储在存储模式中生成了一个列，您被单一行关键字，单一列关键字（作为多列组成部分）和单一列数据值的限制所拦住了。  
   
-```
+```javascript
 cqlsh:Metrics> CREATE TABLE playlists_3 (   id uuid,   song_id uuid,
            ... title text, artist text,
            ... PRIMARY KEY  (id, song_id )
@@ -168,7 +173,7 @@ Bad Request: COMPACT STORAGE with composite PRIMARY KEY allows no more than one 
   
 和之前那一点类似，一个由压缩存储构建的表在它被创建之后不能变动。举个例子，使用压缩存储时你不能对一个表增加或者移除列：  
   
-```
+```javascript
 cqlsh:Metrics> alter table playlists_1 DROP title;
 cqlsh:Metrics> alter table playlists_2 DROP title;
 Bad Request: Cannot drop columns from a COMPACT STORAGE table
@@ -190,3 +195,11 @@ Bad Request: Cannot add new column to a COMPACT STORAGE table
 感谢[ Opsmatic](https://opsmatic.com/) 的 Mikhail Panchenko 审阅文章早期版本。  
   
 如果你喜欢这篇文章想要加入 Cassandra，[ 来和我们工作](http://librato.jobs/)！
+
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews](http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews)

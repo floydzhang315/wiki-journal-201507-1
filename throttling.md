@@ -1,10 +1,14 @@
 # DevTools 摘要: 处理条带化数据时给条带化数据的一个新家 -- 王韬懿
+
+![01](images/keji-01.jpg)  
     
-来源：[https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling](https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling)
+文章翻译：[王韬懿](https://github.com/noprom)
 
-时间：2015年7月23日
+发表时间：2015年7月23日
 
-作者：Paul Bakaus & the DevTools team
+原文作者：Paul Bakaus & the DevTools team
+
+文章分类：全球技术头条
 
 ## 关于本文
 
@@ -68,3 +72,11 @@
 再见！
 
 Paul Bakaus & the DevTools team
+
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling](https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling)

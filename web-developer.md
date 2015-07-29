@@ -2,9 +2,13 @@
 
 ![01](images/skill-up-blog_2.png)  
 
-来源：[https://www.packtpub.com/books/content/today-you-are-not-web-developer-if-you-don%E2%80%99t-know-javascript-and-its-ecosystem](https://www.packtpub.com/books/content/today-you-are-not-web-developer-if-you-don%E2%80%99t-know-javascript-and-its-ecosystem)  
-时间：2015年7月01日  
-作者：MARIO CASCIARO  
+文章翻译：[张月](https://github.com/bitmoonz)  
+
+发表时间：2015 年 7 月 01 日  
+
+原文作者：MARIO CASCIARO  
+
+文章分类：web 开发
 
 ## 关于本文
 
@@ -53,3 +57,11 @@ Mario 的书作为我们的 [Skill Up](https://www.packtpub.com/web-development/
 ###什么是 Skill Up？
 
 在6月期间，我们调查了超过 20000 名 IT 专业人士，了解到他们目前正在使用的技术以及计划在未来 12 个月内将要学习的技术，具体详情请参阅我们的 [Web 开发技能工资报告](https://www.packtpub.com/skillup/web-dev-salary-report)。
+
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[https://www.packtpub.com/books/content/today-you-are-not-web-developer-if-you-don%E2%80%99t-know-javascript-and-its-ecosystem](https://www.packtpub.com/books/content/today-you-are-not-web-developer-if-you-don%E2%80%99t-know-javascript-and-its-ecosystem)
