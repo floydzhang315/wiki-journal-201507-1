@@ -1,6 +1,6 @@
 # Angular 与 React 的比拼– 不相上下
 
-！(images/EgrRejl.png)
+![1](images/EgrRejl.png)
 
 发表时间：2015 年 7 月 29 日
 
