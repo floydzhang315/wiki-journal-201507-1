@@ -8,7 +8,7 @@
 - Web 开发
   - [不懂 JavaScript？那你就不是一个 Web 开发者--张月（已校对）](web-developer.md)
   - [Angular vs. React - the tie breaker -- 康杨 ](tie-breaker.md)
-  - [The Hitchhiker's Guide to Modern JavaScript Tooling--张鸿飞 截止7.29 23.55](javaScript-tooling.md)
+  - [The Hitchhiker's Guide to Modern JavaScript Tooling--张鸿飞 ](javaScript-tooling.md)
   - [Useful Angular.js Tools -- 杨旋](useful-tool.md)
 - 后端开发
   - [为什么是 Node.js ? 什么时候使用 Node.js ? -- 王韬懿 待校对](node-js.md)
