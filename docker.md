@@ -1,4 +1,4 @@
-  # 玩转 Dcoker：Hello World, 开发环境和你的应用
+# 玩转 Dcoker：Hello World, 开发环境和你的应用  -- 周倍同
 
 来源：http://www.tugberkugurlu.com/archive/playing-around-with-docker-hello-world-development-environment-and-your-application
 
