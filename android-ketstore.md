@@ -1,10 +1,14 @@
-# 如何使用安卓密钥库存储密码和其他敏感信息--赵洁
+# 如何使用安卓密钥库存储密码和其他敏感信息
 
-原文地址：http://www.androidauthority.com/use-android-keystore-store-passwords-sensitive-information-623779/
+![image](images/encryption_1-710x473.jpg)
 
-时间：2015年7月10日
+文章翻译：[赵洁](https://github.com/JJJessie)
 
-作者：OBARO OGBO
+发表时间：2015 年 7 月 10 日
+
+原文作者：OBARO OGBO
+
+文章分类：云计算与安全
 
 ## 关于本文
 
@@ -12,13 +16,11 @@
 
 ## 文章内容
 
-![image](images/encryption_1-710x473.jpg)
-
 几个月前，Godfrey Nolan 写了一篇超棒的文章，讨论了[安卓应用程序的开发者如何存储用户的密码和敏感/私人信息](http://www.androidauthority.com/where-is-the-best-place-to-store-a-password-in-your-android-app-597197/)。[安卓密钥库](https://developer.android.com/training/articles/keystore.html)提供一个安全系统等级证书存储。有了密钥库，一个应用程序可以创建一个新的私人的/公共的密钥对，并在保存到私人存储文件夹之前就可以用于加密应用程序的秘密。在本文中，我们将要展示如何使用安卓密钥库来创建和删除密钥，以及如何使用这些密钥来加密和解密用户提供的文本。
 
 ## 准备
 
-在我们编码之前，了解一点关于安卓密钥库的事情以及其能力是很有帮助的。密钥库不是直接用来存储应用程序的秘密的，比如说密码，而是提供一个安全容器，应用程序用其来存储私钥，在某种程度上对于恶意（未经授权）的用户和应用程序来说，检索是相当困难的。
+在我们编码之前，了解一点关于安卓密钥库的事情以及其性能是很有帮助的。密钥库不是直接用来存储应用程序的秘密的，比如说密码，而是提供一个安全容器，应用程序用其来存储私钥，在某种程度上对于恶意（未经授权）的用户和应用程序来说，检索是相当困难的。
 
 正如其名，一个应用程序可以在密钥库里存储多样的密钥，但是只能查看和问询它自己的密钥。理想上，有了密钥库，应用程序可以生成或获取一个存储在密钥库的私人或公共的密钥对。公钥可用于加密应用程序的秘密，在其被存储在应用程序指定的文件夹之前。而私钥是在需要的时候，解密相同的信息。
 
@@ -28,9 +30,9 @@
 
 ## 布局
 
-我们实例应用程序的主要布局是一个 ListView，由应用程序所创建的所有密钥（实际上是密钥别名或名称）所组成的项目。保存为 layout/activity_main.xml。
+我们实例化应用程序的主要布局是一个 ListView，由应用程序所创建的所有密钥（实际上是密钥别名或名称）所组成的项目。保存为 layout/activity_main.xml。
 
-```
+```xml
 <ListView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/listView"
@@ -38,7 +40,6 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     tools:context="com.sample.foo.simplekeystoreapp.MainActivity">
-
 </ListView>
 ```
 
@@ -46,7 +47,7 @@
 
 ![image](images/aa_keystore_list_item-300x88.jpg)
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -91,7 +92,6 @@
         android:layout_toLeftOf="@+id/encryptButton"
         android:text="@string/decrypt"
         style="@style/Base.Widget.AppCompat.Button.Borderless"/>
-
 </RelativeLayout>
 ```
 
@@ -99,7 +99,7 @@
 
 使用此方法将列表标题添加到 ListView。
 
-```
+```javascript
 View listHeader = View.inflate(this, R.layout.activity_main_header, null);
 listView.addHeaderView(listHeader);
 ```
@@ -108,7 +108,7 @@ listView.addHeaderView(listHeader);
 
 在上面的图片中，ListView 当前是空的，所以只有列表标题是可以看到的。列表标题相当明确，在顶端是一个 EditText，当创建一个密钥时需要一个字符串作为别名。生成新的密钥的按钮就在这个的下方。按钮后是三个 EditTexts，一个是需要输入的字符串被加密，另一个展示了加密的结果，然后第三个展示了解密字符串（一个成功的解密）。此文件保存在 layout/activity_main_header.xml。
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -171,12 +171,12 @@ listView.addHeaderView(listHeader);
 
 关于任何活动，我们开始都使用 onCreate() 方法。我们做的第一件事就是引用 AndroidKeyStore，然后对其初始化，使用：
 
-```
+```javascript
 Keystore.getInstance("AndroidKeyStore");
 keystore.load(null)
 ```
 
-然后我们调用 refreshKeys() 方法（接下来讨论）来列出我们应用程序存储在密钥库所有的密钥。这个保证了在密钥库任何的密钥在 ListView 初始化之后立即显示。
+然后我们调用 refreshKeys() 方法（接下来讨论）来列出我们应用程序存储在密钥库所有的密钥。这个保证了在密钥库中的任何的密钥在 ListView 初始化之后立即显示。
 
 ## 列出密钥库所有的密钥
 
@@ -184,7 +184,7 @@ keystore.load(null)
 
 要获取可在密钥库应用程序中所有密钥的列举，只需调用 aliases() 方法。在我们下方的 refreshKeys() 方法中，我们获取密钥库别名，然后把返回的字符串放置到一个 ArrayList（由我们 ListView 的适配器所使用）中。
 
-```
+```javascript
     private void refreshKeys() {
         keyAliases = new ArrayList<>();
         try {
@@ -208,7 +208,7 @@ keystore.load(null)
   
 要生成一个私人或公共的密钥对，我们需要一个 KeyPairGenerator 对象。我们获取 KeyPairGenerator 集合的实例来使用 “AndroidKeyStore” 的 RSA 算法。调用 generateKeyPair() 创建新的密钥对（私钥和相应的公钥），并将其添加到密钥库中。
   
-```
+```javascript
       public void createNewKeys(View view) {
         String alias = aliasText.getText().toString();
         try {
@@ -243,7 +243,7 @@ keystore.load(null)
   
 从密钥库中删除一个密钥相当简单。有密钥别名做准备，调用 keystore.deleteEntry(keyAlias)。没有办法重新存储一个删除了的密钥，所以在删除之前要确定。
   
-```
+```javascript
       public void deleteKey(final String alias) {
         AlertDialog alertDialog =new AlertDialog.Builder(this)
                 .setTitle("Delete Key")
@@ -276,9 +276,9 @@ keystore.load(null)
   
 ![image](images/aa_keystore_encrypt-300x533.jpg)
 
-加密一个文本块由密钥对的公钥执行。我们检索公钥，请求一个[密码](https://developer.android.com/reference/javax/crypto/Cipher.html)，使用我们更喜欢的加密或解密转换（“RSA/ECB/PKCS1Padding”），然后初始化密码，使用检索到的公钥来执行加密（Cipher.ENCRYPT_MODE）。密码操作（和返回）一个字节 []。我们将密码包在 CipherOutputStream 中，和 ByteArrayOutputStream 一起来处理加密复杂性。加密进城的结果就是转化成一个显示为 Base64 的字符串。
+加密一个文本块由密钥对的公钥执行。我们检索公钥，请求一个[密码](https://developer.android.com/reference/javax/crypto/Cipher.html)，使用我们更喜欢的加密或解密转换（“RSA/ECB/PKCS1Padding”），然后初始化密码，使用检索到的公钥来执行加密（Cipher.ENCRYPT_MODE）。密码操作（和返回）一个字节 []。我们将密码包含在 CipherOutputStream 中，和 ByteArrayOutputStream 一起来处理加密复杂性。加密进程的结果就是转化成一个显示为 Base64 的字符串。
   
-```
+```javascript
     public void encryptString(String alias) {
         try {
             KeyStore.PrivateKeyEntry privateKeyEntry = (KeyStore.PrivateKeyEntry)keyStore.getEntry(alias, null);
@@ -311,9 +311,9 @@ keystore.load(null)
 
 ## 解密
 
-解密基本上是加密过程的相反。解密是通过使用密钥对的私钥完成的。然后我们使用和加密相同的转化算法来初始化一个密码，但是设置 Cipher.DECRYPT_MODE。Base64 字符串解码为一个字节[]，然后放置在 ByteArrayInputStream 中。然后我们使用一个 CipherInputStream 来解密数据为一个字节[]。然后显示为一个字符串。
+解密基本上是加密的逆过程。解密是通过使用密钥对的私钥完成的。然后我们使用和加密相同的转化算法来初始化一个密码，但是设置 Cipher.DECRYPT_MODE。Base64 字符串解码为一个字节[]，然后放置在 ByteArrayInputStream 中。然后我们使用一个 CipherInputStream 来解密数据为一个字节[]。然后显示为一个字符串。
 
-```
+```javascript
     public void decryptString(String alias) {
         try {
             KeyStore.PrivateKeyEntry privateKeyEntry = (KeyStore.PrivateKeyEntry)keyStore.getEntry(alias, null);
@@ -356,3 +356,10 @@ keystore.load(null)
 
 安卓密钥库使创建和管理应用程序密钥变得轻而易举，并为应用程序提供了一个相对安全的库来存储加密密钥。当然公钥也可以发送到你的服务器上，服务器的公钥可以发送到你的应用程序上，来确保应用程序和服务器之前的安全通信。按往常来说，完整的源代码在 [github](https://github.com/obaro/SimpleKeystoreApp) 上可供你使用。想要补充、改正或讨论，请在下方留下评论，我们非常期待听到你的声音。
 
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[http://www.androidauthority.com/use-android-keystore-store-passwords-sensitive-information-623779/](http://www.androidauthority.com/use-android-keystore-store-passwords-sensitive-information-623779/)
