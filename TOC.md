@@ -7,7 +7,7 @@
   - [用 Go 语言来看 Android！ 出发，Android。 -- 王韬懿（已校对）](go-mobile-intro.md)
 - Web 开发
   - [不懂 JavaScript？那你就不是一个 Web 开发者--张月（已校对）](web-developer.md)
-  - [Angular vs. React - the tie breaker -- 康杨 ](tie-breaker.md)
+  - [Angular vs. React - the tie breaker -- 康杨 （待校对）](tie-breaker.md)
   - [The Hitchhiker's Guide to Modern JavaScript Tooling--张鸿飞 待校对 ](javaScript-tooling.md)
   - [有用的 Angular.js 工具 -- 杨旋（已校对）](useful-tool.md)
 - 后端开发
