@@ -8,7 +8,7 @@
   
 ## 本文概要  
   
-本文概要是  
+本文简要介绍了 Apple Watch 上一个非常成功的应用 Invoice2go 和其开发公司创始人 Chris Strode 向开发者们分享的 5 个建议，这 5 个建议有助于开发者们开发出成功的 Apple Watch 应用。 
   
 ## 文章内容  
   
