@@ -1,9 +1,14 @@
 # 用 Go 语言来看 Android！ 出发，Android。 出发!  -- 王韬懿
-来源：[http://www.codingvelocity.com/2015/07/23/go-mobile-intro.html](http://www.codingvelocity.com/2015/07/23/go-mobile-intro.html)
 
-时间：2015年7月23日
+![01](images/go-01.jpg)
 
-作者：Chester
+文章翻译：[王韬懿](https://github.com/noprom)
+
+发表时间：2015 年 7 月 23 日
+
+原文作者：Chester
+
+文章分类：移动应用开发
 
 ## 关于本文
 
@@ -86,3 +91,11 @@ func main() {
 在这里可以找到文档[https://godoc.org/golang.org/x/mobile](https://godoc.org/golang.org/x/mobile)
 
 源代码在这里 [https://github.com/golang/mobile](https://github.com/golang/mobile)
+
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[http://www.codingvelocity.com/2015/07/23/go-mobile-intro.html](http://www.codingvelocity.com/2015/07/23/go-mobile-intro.html)
