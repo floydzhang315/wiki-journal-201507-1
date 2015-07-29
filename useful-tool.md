@@ -2,11 +2,13 @@
 
 ![01](images/angular-tools.png)
 
-文章翻译 ：[杨旋](http://weibo.com/u/3836067975/home?wvr=5&sudaref=www.baidu.com)
+文章翻译 ：[杨旋](https://github.com/yangxuanxc)
 
 发表时间：2015 年 7 月 23 日
 
 原文作者：Leena Joseph 
+
+文章分类：web 开发
 
 ## 关于本文
 
@@ -148,6 +150,9 @@ Angular Deckgrid 给您的应用程序提供高度响应和优秀视图，可以
 
 
 我是 Leena Joseph。我是一个充满激情的 [angularjs 开发人员](http://www.agriya.com/services/angularjs-development)，我和 Agriya 一同工作，他喜欢分享一些技巧以及 web 开发服务的最新趋势。我比较熟悉 YII 框架，Laravel 开发！请在 twitter 上关注我。
+
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
 
 > 版权声明：   
 > 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
