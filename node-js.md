@@ -2,11 +2,11 @@
 
 ![0](images/why-nodejs.png)
 
-来源：[http://www.fromdev.com/2015/07/why-node-js-popular.html](http://www.fromdev.com/2015/07/why-node-js-popular.html)
+文章翻译：[王韬懿](https://github.com/noprom)
 
-时间：2015年7月03日
+发表时间：2015 年 7 月 03 日
 
-作者：http://www.fromdev.com/
+作者：Sachin FromDev
 
 ## 关于本文
 
@@ -134,4 +134,10 @@ Node 的 JavaScript 的语言结构当然会让你远离键盘。只需要一点
 
 你可以在 Java 平台上面做到那一点，但是你需要更多行的代码和额外的类库和开发。并且，以防止你在研究其他编程环境时被惹怒，请不要这样以为：你知道一些 JavaScript 的话，Node 就非常简单。我敢打赌你会这样做。
 
-    
+ > 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[http://www.fromdev.com/2015/07/why-node-js-popular.html](http://www.fromdev.com/2015/07/why-node-js-popular.html)   
