@@ -2,9 +2,12 @@
 
 ![01](images/tools-resources-01.png)  
 
-来源：http://codecondo.com/15-useful-ui-and-ux-tools-and-resources-for-designers/  
-时间：2015年7月25日  
-作者：Prat  
+文章翻译：[邵凯阳]()
+
+发表时间：2015年7月25日  
+
+原文作者：Prat  
+
 文章分类：产品与设计
 
 ## 关于文本
