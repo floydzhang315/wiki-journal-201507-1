@@ -20,14 +20,14 @@
 - 智能硬件
   - [How to develop a simple Android Wear app -- 邵凯阳](android-wear-app.md)
 - 云计算与安全
-  - [Playing Around with Docker: Hello World, Development Environment and Your Application -- 周倍同](docker.md)
+  - [Playing Around with Docker: Hello World, Development Environment and Your Application -- 周倍同（待校对）](docker.md)
   - [How to use the Android Keystore to store passwords and other sensitive information -- 赵洁](android-ketstore.md)
 - 全球技术头条
   - [DevTools 摘要: 处理条带化数据时给条带化数据的一个新家-- 王韬懿（已校对）](throttling.md)
   - [4 reasons why Google joined OpenStack -- 张月](openstack.md)
 - 产品与设计
   - [15 Useful UI and UX Tools and Resources for Designers -- 邵凯阳](tools-resources.md)
-  - [5 tips for designing a brilliant Apple Watch app -- 朱瀚杰](apple-watch.md)
+  - [5 tips for designing a brilliant Apple Watch app -- 朱瀚杰 （待校对）](apple-watch.md)
 - 职业规划与加薪
   - [如何成为一个超级软件开发者 -- 杨旋 （已校对）](super-software-developer.md)
 
