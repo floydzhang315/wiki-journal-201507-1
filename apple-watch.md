@@ -1,7 +1,9 @@
-# 5 个提示助你设计出精妙的 Apple Watch 应用软件  
+# 5 个提示助你设计出精妙的 Apple Watch 应用软件  -- 朱瀚杰
   
 文章来源：[http://mashable.com/2015/07/09/invoice2go-apple-watch-app/](http://mashable.com/2015/07/09/invoice2go-apple-watch-app/)  
+
 时间：2015年7月9日  
+
 作者：[Ariel Bogle](http://mashable.com/people/ariel-bogle/)  
   
 ![INVOICE2GO](images/apple-watch01.jpg)  
