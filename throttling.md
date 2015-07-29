@@ -1,6 +1,6 @@
 # DevTools 摘要: 处理条带化数据时给条带化数据的一个新家 -- 王韬懿
 
-![01](images/openstack-01.jpg)  
+![01](images/keji-01.jpg)  
     
 文章翻译：[王韬懿](https://github.com/noprom)
 
