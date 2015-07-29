@@ -1,5 +1,7 @@
 # 为什么是 Node.js ? 什么时候使用 Node.js ?  -- 王韬懿
 
+![0](images/why-nodejs.png)
+
 来源：[http://www.fromdev.com/2015/07/why-node-js-popular.html](http://www.fromdev.com/2015/07/why-node-js-popular.html)
 
 时间：2015年7月03日
