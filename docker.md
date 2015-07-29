@@ -1,4 +1,4 @@
-# 玩转 Dcoker：Hello World, 开发环境和你的应用  -- 周倍同
+# 玩转 Dcoker：Hello World, 开发环境和你的应用
 
 文章翻译：[周倍同](https://github.com/tmac1997)
 
