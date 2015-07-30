@@ -20,7 +20,7 @@
 
 ### 示例程序
 
-```javascript
+```c
 //testProgram.c
 #include <stdio.h>
 
@@ -37,7 +37,7 @@ int main() {
 
 编译和运行该程序可以得到下面的输出：
 
-```javascript
+```
 Calling original function!
 The number is: 5
 ```
@@ -50,7 +50,7 @@ The number is: 5
 
 这个过程的第一步就是创建包含一个构造函数和一个替换函数的动态库。
 
-```javascript
+```c
 //inject.c
 #include <stdio.h>
 
@@ -79,7 +79,7 @@ The number is: 5
 
 为了钩入目标函数，现在我们可以开始向构造函数中添加代码。由于 x86 跳转指令使用相对寻址，所以我们不能简单的在内存中给计算机一个地址让其跳转。首先，我们需要从目标函数中找到替换函数的抵消函数，这些可以通过获得进入每个函数的指针，然后从另一个指针中减去一个函数的指针。
 
-```javascript
+```c
 void *mainProgramHandle = dlopen(NULL, RTLD_NOW);
 int64_t *origFunc = dlsym(mainProgramHandle , "hookTargetFunction");
 int64_t *newFunc = (int64_t*)&hookReplacementFunction;
@@ -90,14 +90,14 @@ int32_t offset = (int64_t)newFunc - ((int64_t)origFunc + 5 * sizeof(char));
 
 在这篇文章中我省略了一小步，那就是使目标函数所在的内存是可写的，因为处于安全的考虑，在默认情况下内存仅仅是可读的和可执行的。一旦这些被完成，最后一步就是创建和插入跳转指令。x86 操作码是 E9，他与立即数偏移寻址一起是无条件跳转，因此我们将这作为指令的第一个字节，紧跟的是偏移。 
 
-```javascript
+```c
 int64_t instruction = 0xE9 | offset << 8;
 *origFunc = instruction;
 ```
 
 这里是完成的 `inject.c` 文件:
 
-```javascript
+```c
 #include <stdio.h>
 #include <dlfcn.h>
 #include <stdint.h>
@@ -133,7 +133,7 @@ static void ctor(void) {
 
 当他编译和执行完后，他确实改变了主程序的输出！
 
-```javascript
+```c
 $ ls
 inject.c    testProgram testProgram.c
 $ ./testProgram 
@@ -147,7 +147,7 @@ The number is: 3
 
 这里是另外一个执行过程和一些调试输出，显示了跳转指令插入目标函数的开始：
 
-```javascript
+```c
 $ DYLD_INSERT_LIBRARIES=inject.dylib ./testProgram
 Original function address: 0x1078abee0
 Replacement function address: 0x1078b4c40
