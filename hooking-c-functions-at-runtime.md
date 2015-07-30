@@ -37,7 +37,7 @@ int main() {
 
 编译和运行该程序可以得到下面的输出：
 
-```javascript
+```
 Calling original function!
 The number is: 5
 ```
@@ -133,7 +133,7 @@ static void ctor(void) {
 
 当他编译和执行完后，他确实改变了主程序的输出！
 
-```shell
+```c
 $ ls
 inject.c    testProgram testProgram.c
 $ ./testProgram 
@@ -147,7 +147,7 @@ The number is: 3
 
 这里是另外一个执行过程和一些调试输出，显示了跳转指令插入目标函数的开始：
 
-```shell
+```c
 $ DYLD_INSERT_LIBRARIES=inject.dylib ./testProgram
 Original function address: 0x1078abee0
 Replacement function address: 0x1078b4c40

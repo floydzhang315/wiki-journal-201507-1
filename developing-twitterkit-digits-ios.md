@@ -46,7 +46,7 @@ Twitter 想要让他们的验证机制对开发者来说更加简单有效、更
 
 使用 Twitter 验证登录的最简单的方法就通过创建的按钮，TWTRLogInButton，下面我们就通过使用 iOS 的 Swift 语言来试一下。
 
-```javascript
+```swift
 let authenticationButton = TWTRLogInButton(logInCompletion:
         { (session, error) in
             if (session != nil) {
@@ -63,7 +63,7 @@ let authenticationButton = TWTRLogInButton(logInCompletion:
 
 上面我们使用 TwitterKit 创建了一个登陆按钮，接下来我们就用 Digits 来完成同样的功能。Digits 使用起来也是非常简单，下面我们再次通过一个简单的方法创建按钮，DGTAuthenticateButton。
 
-```javascript
+```swift
 let authenticationButton = TWTRLogInButton(logInCompletion:
         { (session, error) in
             if (session != nil) {
