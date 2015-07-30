@@ -1,14 +1,16 @@
 # 5 个提示助你设计出精妙的 Apple Watch 应用软件  -- 朱瀚杰
-  
-文章来源：[http://mashable.com/2015/07/09/invoice2go-apple-watch-app/](http://mashable.com/2015/07/09/invoice2go-apple-watch-app/)  
 
-时间：2015年7月9日  
+![INVOICE2GO](images/apple-watch01.jpg)    
+  
+文章翻译：[朱瀚杰](https://github.com/Owligan)  
 
-作者：[Ariel Bogle](http://mashable.com/people/ariel-bogle/)  
-  
-![INVOICE2GO](images/apple-watch01.jpg)  
-  
-## 本文概要  
+发表时间：2015 年 7 月 9 日  
+
+原文作者：[Ariel Bogle](http://mashable.com/people/ariel-bogle/)  
+
+文章分类：产品与设计
+
+## 关于本文 
   
 本文简要介绍了 Apple Watch 上一个非常成功的应用 Invoice2go 和其开发公司创始人 Chris Strode 向开发者们分享的 5 个建议，这 5 个建议有助于开发者们开发出成功的 Apple Watch 应用。 
   
@@ -45,7 +47,6 @@
 您可能会犯的最大错误就是去尝试把平板电脑或者智能手机上的应用复制到智能手表上，Strode 说道。您需要做的不是复制，而是真正能在手腕上工作的产品。  
   
 设计者们将发现他们在手表上起作用的应用部分，Strode 补充道。比如推送通知，会变得非常强大使您不必从您的口袋里面取出手机来查看。  
-  
 ## 3.选择合适的外观  
   
 拥有独特的色彩感觉是很重要的。智能手表的黑色背景意味着你必须选对颜色，Strode 是这样说的。“我们真的重新考虑了荧光色，”他说。“就是因为黑色的背景才会去这样做。”  
@@ -58,7 +59,7 @@
   
 很多人忘了考虑的一件重要事情就是 Apple Watch 是一个配件，Strode 说。没有您的 iPhone 连接 Apple Watch 将不会正常工作。  
   
-由于这个原因，大浪的开发工作都需要去研发一个高强功能的智能手机应用来和 Apple Watch 应用进行无缝配对。“本质上你是在手机应用之上开发 Apple Watch 应用的。”Strode 补充道。  
+由于这个原因，大量的开发工作都需要去研发一个高强功能的智能手机应用来和 Apple Watch 应用进行无缝配对。“本质上你是在手机应用之上开发 Apple Watch 应用的。”Strode 补充到。  
   
 ## 5.简要和详细  
   
@@ -71,3 +72,11 @@
 同时，他推荐设计者们挖掘能在这种新设备上产生最最大效果的创意。“然后朝着目标全速前进。”  
   
 想为这篇文章加点什么？在评论中分享吧。
+
+> 更多IT技术干货: [wiki.jikexueyuan.com](wiki.jikexueyuan.com)   
+> 加入极客星球翻译团队: [http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html](http://wiki.jikexueyuan.com/project/wiki-editors-guidelines/translators.html)   
+
+> 版权声明：   
+> 本译文仅用于学习和交流目的。非商业转载请注明译者、出处，并保留文章在极客学院的完整链接   
+> 商业合作请联系 wiki@jikexueyuan.com   
+> 原文地址：[http://mashable.com/2015/07/09/invoice2go-apple-watch-app/](http://mashable.com/2015/07/09/invoice2go-apple-watch-app/)

@@ -1,31 +1,31 @@
 - 移动应用开发
-  - [使用 ionic 将数据保存到本地存储中](https://www.packtpub.com/books/content/persisting-data-local-storage-ionic)
-  - [运行时的挂钩 C 函数](http://thomasfinch.me/blog/2015/07/24/Hooking-C-Functions-At-Runtime.html)
-  - [在 iOS 开发中使用 TWITTERKIT & DIGITS](https://www.packtpub.com/books/content/developing-twitterkit-digits-ios)
-  - [用 Go 语言来看 Android！ 出发，Android](http://www.codingvelocity.com/2015/07/23/go-mobile-intro.html)
+  - [使用 ionic 将数据保存到本地存储中 -- 周倍同](https://www.packtpub.com/books/content/persisting-data-local-storage-ionic)
+  - [运行时的挂钩 C 函数 -- 邵凯阳](http://thomasfinch.me/blog/2015/07/24/Hooking-C-Functions-At-Runtime.html)
+  - [在 iOS 开发中使用 TWITTERKIT & DIGITS -- 周倍同](https://www.packtpub.com/books/content/developing-twitterkit-digits-ios)
+  - [用 Go 语言来看 Android！ 出发，Android。 -- 王韬懿](http://www.codingvelocity.com/2015/07/23/go-mobile-intro.html)
 - Web 开发
-  - [不懂 JavaScript？那你就不是一个 Web 开发者](https://www.packtpub.com/books/content/today-you-are-not-web-developer-if-you-don%E2%80%99t-know-javascript-and-its-ecosystem)
-  - [Angular vs. React - the tie breaker](https://www.airpair.com/angularjs/posts/angular-vs-react-the-tie-breaker)
-  - [The Hitchhiker's Guide to Modern JavaScript Tooling](http://reactkungfu.com/2015/07/the-hitchhikers-guide-to-modern-javascript-tooling/)
-  - [Useful Angular.js Tools ](http://www.fromdev.com/2015/07/useful-angularjs-tools.html)
+  - [不懂 JavaScript？那你就不是一个 Web 开发者--张月](https://www.packtpub.com/books/content/today-you-are-not-web-developer-if-you-don%E2%80%99t-know-javascript-and-its-ecosystem)
+  - [Angular 与 React 的比拼 – 不相上下 -- 康杨](https://www.airpair.com/angularjs/posts/angular-vs-react-the-tie-breaker)
+  - [现代 Javascript 工具漫游指南 --张鸿飞](http://reactkungfu.com/2015/07/the-hitchhikers-guide-to-modern-javascript-tooling/)
+  - [有用的 Angular.js 工具 -- 杨旋 ](http://www.fromdev.com/2015/07/useful-angularjs-tools.html)
 - 后端开发
-  - [为什么是 Node.js ? 什么时候使用 Node.js ? ](http://www.fromdev.com/2015/07/why-node-js-popular.html)
+  - [为什么是 Node.js ? 什么时候使用 Node.js ? -- 王韬懿 ](http://www.fromdev.com/2015/07/why-node-js-popular.html)
 - 大数据及商务智能
-  - [理解 Cassandra 压缩储存的作用](http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews)
-  - [从 HDFS 中使用分布式的 MAP REDUCE JOB 写入 CASSANDRA](https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job)
+  - [理解 Cassandra 压缩储存的作用 -- 朱瀚杰](http://blog.librato.com/posts/cassandra-compact-storage?utm_campaign=social-blog-posts&utm_content=cassandra-compact-storage&utm_medium=social&utm_source=hackernews)
+  - [从 HDFS 中使用分布式的 MAP REDUCE JOB 写入 CASSANDRA  -- 王运里](https://www.packtpub.com/books/content/writing-cassandra-hdfs-using-hadoop-map-reduce-job)
 - 游戏开发
-  - [在游戏开发中获得成功 ](https://www.packtpub.com/books/content/making-it-games-development)
+  - [在游戏开发中获得成功 -- 张鸿飞  ](https://www.packtpub.com/books/content/making-it-games-development)
 - 智能硬件
-  - [How to develop a simple Android Wear app ](http://www.androidauthority.com/develop-simple-android-wear-app-622043/)
+  - [如何开发一个简单的 Android Wear 应用程序 -- 邵凯阳  ](http://www.androidauthority.com/develop-simple-android-wear-app-622043/)
 - 云计算与安全
-  - [Playing Around with Docker: Hello World, Development Environment and Your Application ](http://www.tugberkugurlu.com/archive/playing-around-with-docker-hello-world-development-environment-and-your-application)
-  - [How to use the Android Keystore to store passwords and other sensitive information ](http://www.androidauthority.com/use-android-keystore-store-passwords-sensitive-information-623779/)
+  - [玩转 Dcoker：Hello World, 开发环境和你的应用 -- 周倍同 ](http://www.tugberkugurlu.com/archive/playing-around-with-docker-hello-world-development-environment-and-your-application)
+  - [如何使用安卓密钥库存储密码和其他敏感信息 -- 赵洁 ](http://www.androidauthority.com/use-android-keystore-store-passwords-sensitive-information-623779/)
 - 全球技术头条
-  - [DevTools 摘要: 处理条带化数据时给条带化数据的一个新家](https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling)
-  - [4 reasons why Google joined OpenStack ](http://www.infoworld.com/article/2948901/openstack/4-reasons-google-joined-openstack.html)
+  - [DevTools 摘要: 处理条带化数据时给条带化数据的一个新家-- 王韬懿](https://developers.google.com/web/updates/2015/07/23/devtools-digest-film-strip-and-a-new-home-for-throttling)
+  - [谷歌加入 OpenStack 基金会的 4 个理由 -- 张月 ](http://www.infoworld.com/article/2948901/openstack/4-reasons-google-joined-openstack.html)
 - 产品与设计
-  - [15 Useful UI and UX Tools and Resources for Designers ](http://codecondo.com/15-useful-ui-and-ux-tools-and-resources-for-designers/)
-  - [5 tips for designing a brilliant Apple Watch app ](http://mashable.com/2015/07/09/invoice2go-apple-watch-app/)
+  - [15个很有用的面向设计师的 UI 和 UX 设计工具及资源 -- 邵凯阳 ](http://codecondo.com/15-useful-ui-and-ux-tools-and-resources-for-designers/)
+  - [5 个提示助你设计出精妙的 Apple Watch 应用软件 -- 朱瀚杰 ](http://mashable.com/2015/07/09/invoice2go-apple-watch-app/)
 - 职业规划与加薪
-  - - [How to Become a Super Software Developer](https://www.linkedin.com/pulse/how-become-great-software-developer-jason-roell) 
+  - - [如何成为一个超级软件开发者 -- 杨旋 ](https://www.linkedin.com/pulse/how-become-great-software-developer-jason-roell) 
  
