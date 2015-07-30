@@ -27,7 +27,7 @@
   - [谷歌加入 OpenStack 基金会的 4 个理由 -- 张月（已校对）](openstack.md)
 - 产品与设计
   - [15个很有用的面向设计师的 UI 和 UX 设计工具及资源 -- 邵凯阳（已校对）](tools-resources.md)
-  - [5 个提示助你设计出精妙的 Apple Watch 应用软件 -- 朱瀚杰 （待校对）](apple-watch.md)
+  - [5 个提示助你设计出精妙的 Apple Watch 应用软件 -- 朱瀚杰 （已校对）](apple-watch.md)
 - 职业规划与加薪
   - [如何成为一个超级软件开发者 -- 杨旋 （已校对）](super-software-developer.md)
 
