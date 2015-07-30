@@ -1,9 +1,7 @@
 # 如何开发一个简单的 Android Wear 应用程序
 ![01](images/android-wear-app-01.jpg)  
 
-文章来源：http://www.androidauthority.com/develop-simple-android-wear-app-622043/  
-
-文章翻译：邵凯阳  
+文章翻译：[邵凯阳](https://github.com/shaokaiyang)
 
 发表时间：2015 年 7 月 3 日  
 
@@ -12,13 +10,17 @@
 文章分类：智能硬件  
 
 ## 关于文本
+
 Android Wear 是谷歌为智能手表打造的全新智能开放平台，于 2014 年 3 月 19 日宣布推出。随着科技的发展，越来越多的人开始进行应用程序的开发，但是在 Android Wear 上开发应用程序却会给您带来别样的体验。本篇文章就详细地介绍了一个简单的 Android Wear 应用程序的开发过程。
+
 ## 文章内容
+
 上月初，Alex Mullis 写了一篇很精彩的文章，讨论 [为 Android Wear 开发你所需要知道的一切](http://www.androidauthority.com/developing-for-android-wear-everything-you-need-to-know-614648/)。我们现在将把这一步走的更远一些——开发一个简单的 Android Wear 应用程序，为安卓做开发是一个很令人兴奋的尝试，但在您的应用程序中包含 Android Wear 的特性会更加有趣，相信我!
 
 在我们开始之前，请将以下内容记在您的脑海里。可穿戴式应用程序，即使它们跟应用于手持设备的普通应用程序很相似，构建的应用程序在规模和功能上都应该比较小。我想您不想尝试将您手持设备上的应用程序的全部功能替换为可穿戴式的。相反，您应该寻找方法，利用可穿性来完善您手持设备上的应用程序。理想情况下，应在手机上执行大多数运算，并将结果发送至可穿戴设备。
 
 ## 准备
+
 我们的应用程序将是一个简单的安卓应用程序，将通知从手机发送到配对的可穿戴设备上，而可穿戴设备只拥有一个相应的嵌入式应用程序和一个单一的点击按钮。
 
 这篇文章中，我们假设您使用 Android Studio。Android Studio 是安卓应用程序开发的实际标准。为了开发可穿戴式应用程序，您需要将您的 SDK 工具更新到版本 23.0.0 或更高，并且让您的 SDK 搭载 Android 4.4W.2 或更高。
@@ -26,13 +28,14 @@ Android Wear 是谷歌为智能手表打造的全新智能开放平台，于 201
 然后您应该设置一个可穿戴的 Android 设备或可穿戴的 Android 模拟器。
 
 ### 对于一个模拟器
+
 - 使用 AVD 管理器创建一个方形或者圆形的安卓可穿戴设备。
 - 启动模拟器设备设备。
 - 从谷歌应用商店安装安卓可穿戴应用程序。
 - 通过 USB 链接你的手持设备和开发设备。
 - 从 AVD 通信端口向手持设备传送指令。
 
-```
+```java
 adb -d forward tcp:5601 tcp:5601
 ```
 
@@ -40,6 +43,7 @@ adb -d forward tcp:5601 tcp:5601
 - 在您的手机上运行安卓可穿戴应用程序并通过应用程序设置连接到模拟器。
 
 ### 对于一个安卓穿戴设备
+
 - 通过谷歌应用商店在智能手机上安装安卓可穿戴应用程序。
 - 按照应用程序中的说明将你的手持设备和可穿戴设备进行配对。
 - 使你的可穿戴设备具有开发人员选项（点击内部版本号 7 次在设置 > 关于）。
@@ -47,6 +51,7 @@ adb -d forward tcp:5601 tcp:5601
 - 将可穿戴设备与开发机器连接，并且你应该能够直接对你的可穿戴设备进行应用程序的安装和调试。
 
 ## 创建您的项目
+
 对于本教程完整的源代码在[github](https://github.com/obaro/SimpleWearApp)上可以找到，但您也可能想要创建您自己的项目，以在这个过程中获得别样的感觉。Android Studio 提供向导机制来帮助创建一个项目，并且他们会以最好的方式来设置您的安卓可穿戴应用程序项目。单击文件 > 新项目，并按照说明操作。
 
 这个过程[类似于创建一个手机/平板电脑项目](http://www.androidauthority.com/first-android-app-what-you-need-to-know-619260/)。只需确保在"Form Factors"窗口中选择"Phone and Tablet"和"Wear"两个选项。
@@ -56,11 +61,12 @@ adb -d forward tcp:5601 tcp:5601
 当向导完成时，Android Studio已经创建了一个新项目拥有两个模块——移动模块和穿戴模块。对于每个模块，您可以创建活动、 服务、 布局等。请记住，智能手机应用程序 (移动模块) 应该做大部分工作，像强化处理和网络通信，然后将通知发送到可穿戴设备。
 
 ### “mobile” 模块
+
 移动模块与您使用的普通安卓开发是一样的。对于我们的移动模块，我们创建一个简单的活动，使用 EditText 字段和一个按钮。当触碰按钮，输入 EditText 的文本将被作为通知发送到可穿戴设备。
 
 布局是相当直接的:
 
-```
+```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -89,7 +95,7 @@ adb -d forward tcp:5601 tcp:5601
 
 主要活动也是相当直接的:
 
-```
+```java
 public class MainActivity extends AppCompatActivity {
     EditText editText;
     @Override
@@ -115,25 +121,27 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-请注意，当创建我们的通知时,我们称其为 extend() 方法, 提供了一个NotificationCompat.WearableExtender() 对象.
+请注意，当创建我们的通知时,我们称其为 extend() 方法, 提供了一个 NotificationCompat.WearableExtender() 对象.
 
 ## 运行移动模块
+
 像您运行任何其他安卓应用程序一样运行移动模块。只要您将他与可穿戴设备(模拟器或真实设备) 配对，在您的设备上运行该项目，将在您的穿戴设备上显示通知。
 
 ![03](images/android-wear-app-03.png)  
+
 ### “wear” 模块
 
 在这一点上，您应该能够在您的穿戴设备上查看来自您的移动设备的通知。然而，我们并不满意，我们要建立和运行一个实际的可穿戴应用程序。可穿戴设备，有一个远比手持设备小的屏幕，并且通常为圆形或矩形。这些给他自身的布局带来了挑战。实现了跨越式的是，谷歌为安卓可穿戴应用程序开发者提供了一些优秀的设计准则和 UI 模式。当您使用 Android Studio 项目向导创建您的可穿戴应用程序时，可穿戴 UI 库将自动的包含在您的项目中。确认其是否存在，如果没有存在，请将其添加在 build.gradle 文件中:
 
-```
+```java
 dependencies {
 	compile 'com.google.android.support:wearable:+'
 }
 ```
 
-如果您创建您的项目时使用了 Android Studio项目向导，将会有一个包含两个不同布局文件的活动已经建立，这两个不同的布局文件将分别应用于圆形和矩形设备。Activity_wear.xml 文件如下所示:
+如果您创建您的项目时使用了 Android Studio 项目向导，将会有一个包含两个不同布局文件的活动已经建立，这两个不同的布局文件将分别应用于圆形和矩形设备。Activity_wear.xml 文件如下所示:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.wearable.view.WatchViewStub
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -160,7 +168,7 @@ dependencies {
 
 ![04](images/android-wear-app-04.png)  
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -197,7 +205,7 @@ dependencies {
 
 ![05](images/android-wear-app-05.png)  
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -231,7 +239,7 @@ dependencies {
 
 WearActivity 扩展 android.app.Activity (注意不是 AppCompatActivity)，就像任何正常的 安卓智能手机或平板电脑活动。我们在 WatchViewStub上设置一个 OnLayoutInflatedListener 对象，当 WatchViewStub 已经确定可穿戴设备是否是圆形或是矩形时，他将会被调用。您可以使用 OnLayoutInflatedListener 的 onLayoutInflated 方法来找到使用在 findViewById() 中的小部件。在我们的例子中，我们实例化按钮和 DelayedConfirmationView，然后调用 showOnlyButton() 函数来隐藏 DelayedConfirmationView ，并且只显示按钮。
 
-```
+```java
 public class WearActivity extends Activity {
     private Button button;
     private DelayedConfirmationView delayedView;
@@ -280,6 +288,7 @@ public class WearActivity extends Activity {
 ![06](images/android-wear-app-06.gif)  
 
 ## 部署一个发布版本
+
 虽然在开发过程中您直接将您的应用程序安装在可穿戴设备上，但是出版和发布应用程序对用户来说是完全不同的。您的可穿戴应用程序必须嵌入在手持设备的应用程序中，当可穿戴设备与用户的手持设备连接的时候，应用程序将会被自动的推送到可穿戴设备上。访问安卓开发者网站关于[包装可穿戴式应用程序](https://developer.android.com/training/wearables/apps/packaging.html) 来获得更多的信息，从而更加恰当的包装您自己的可穿戴应用程序。
 
 通常，完整的代码在 [github](https://github.com/obaro/SimpleWearApp) 上都可以找到，只要你认为是有用的。快乐的编码。
