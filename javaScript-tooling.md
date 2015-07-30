@@ -1,4 +1,4 @@
-# 现代 Javascript 工具漫游指南 -- 张鸿飞  
+# 现代 Javascript 工具漫游指南 
 
 ![01](images/the-hitchhiker's-guide-to-modern-javaScript-tooling-01.jpg)  
 
